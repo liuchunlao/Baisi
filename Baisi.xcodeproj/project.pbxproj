@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3DF448B3CAC68682887F692 /* libPods-Baisi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84C41E034515526383CF69 /* libPods-Baisi.a */; };
 		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
 		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
 		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B84C41E034515526383CF69 /* libPods-Baisi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Baisi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B95C6BB3D8E521C613913C2 /* Pods-Baisi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.release.xcconfig"; sourceTree = "<group>"; };
 		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		D96DC24B212EB56800211244 /* BAIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAIMacro.h; sourceTree = "<group>"; };
 		D96DC24C212EBBD700211244 /* UIBarButtonItem+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CZAddition.h"; sourceTree = "<group>"; };
 		D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CZAddition.m"; sourceTree = "<group>"; };
+		F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,17 +96,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DF448B3CAC68682887F692 /* libPods-Baisi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E34D5FFFA074A7726532877 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B84C41E034515526383CF69 /* libPods-Baisi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D96DC1B2212EA75300211244 = {
 			isa = PBXGroup;
 			children = (
 				D96DC1BD212EA75300211244 /* Baisi */,
 				D96DC1BC212EA75300211244 /* Products */,
+				E396CA5C606456F401EE4B84 /* Pods */,
+				7E34D5FFFA074A7726532877 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,6 +282,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E396CA5C606456F401EE4B84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */,
+				9B95C6BB3D8E521C613913C2 /* Pods-Baisi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -274,9 +298,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D96DC1D1212EA75900211244 /* Build configuration list for PBXNativeTarget "Baisi" */;
 			buildPhases = (
+				B57F007950D5FE3E6421D9BB /* [CP] Check Pods Manifest.lock */,
 				D96DC1B7212EA75300211244 /* Sources */,
 				D96DC1B8212EA75300211244 /* Frameworks */,
 				D96DC1B9212EA75300211244 /* Resources */,
+				9646761BB25665446199C8FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +356,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9646761BB25665446199C8FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Baisi/Pods-Baisi-resources.sh",
+				"${PODS_ROOT}/HXWeiboPhotoPicker/微博照片选择/HXWeiboPhotoPicker/HXWeiboPhotoPicker.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/PGDatePicker/PGDatePicker/PGDatePicker.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HXWeiboPhotoPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PGDatePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baisi/Pods-Baisi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B57F007950D5FE3E6421D9BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Baisi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D96DC1B7212EA75300211244 /* Sources */ = {
@@ -479,6 +560,7 @@
 		};
 		D96DC1D2212EA75900211244 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -498,6 +580,7 @@
 		};
 		D96DC1D3212EA75900211244 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B95C6BB3D8E521C613913C2 /* Pods-Baisi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
