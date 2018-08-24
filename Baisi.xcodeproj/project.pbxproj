@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
+		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
+		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
+		D96DC1FD212EAA4F00211244 /* NSArray+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1E4212EAA4E00211244 /* NSArray+CZAddition.m */; };
+		D96DC1FE212EAA4F00211244 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1E6212EAA4E00211244 /* NSArray+Log.m */; };
+		D96DC1FF212EAA4F00211244 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1E8212EAA4E00211244 /* NSAttributedString+CZAdditon.m */; };
+		D96DC200212EAA4F00211244 /* NSObject+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1EA212EAA4E00211244 /* NSObject+CZAddition.m */; };
+		D96DC201212EAA4F00211244 /* NSString+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1EC212EAA4E00211244 /* NSString+CZAddition.m */; };
+		D96DC202212EAA4F00211244 /* UIButton+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1EE212EAA4E00211244 /* UIButton+CZAddition.m */; };
+		D96DC203212EAA4F00211244 /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1F0212EAA4E00211244 /* UIColor+CZAddition.m */; };
+		D96DC204212EAA4F00211244 /* UIImage+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1F2212EAA4E00211244 /* UIImage+CZAddition.m */; };
+		D96DC205212EAA4F00211244 /* UILabel+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1F4212EAA4E00211244 /* UILabel+CZAddition.m */; };
+		D96DC206212EAA4F00211244 /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1F6212EAA4E00211244 /* UIScreen+CZAddition.m */; };
+		D96DC208212EAA4F00211244 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1FA212EAA4E00211244 /* UIView+CZAddition.m */; };
+		D96DC209212EAA4F00211244 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1FC212EAA4E00211244 /* UIViewController+CZAddition.m */; };
+		D96DC233212EB15F00211244 /* BAITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC232212EB15F00211244 /* BAITabBarController.m */; };
+		D96DC236212EB17300211244 /* BAINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC235212EB17300211244 /* BAINavigationController.m */; };
+		D96DC239212EB17F00211244 /* BAITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC238212EB17F00211244 /* BAITabBar.m */; };
+		D96DC23C212EB19300211244 /* BAIEssenseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC23B212EB19300211244 /* BAIEssenseController.m */; };
+		D96DC241212EB1D300211244 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC240212EB1D300211244 /* BaseController.m */; };
+		D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC243212EB20F00211244 /* BAIFocusController.m */; };
+		D96DC247212EB21900211244 /* BAIMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC246212EB21900211244 /* BAIMeController.m */; };
+		D96DC24A212EB22400211244 /* BAINewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC249212EB22400211244 /* BAINewController.m */; };
+		D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D96DC1CD212EA75900211244 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D96DC1DC212EA96700211244 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D96DC1DD212EA96700211244 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D96DC1DF212EA9B500211244 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D96DC1E2212EAA4E00211244 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
+		D96DC1E3212EAA4E00211244 /* NSArray+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1E4212EAA4E00211244 /* NSArray+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1E5212EAA4E00211244 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		D96DC1E6212EAA4E00211244 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		D96DC1E7212EAA4E00211244 /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
+		D96DC1E8212EAA4E00211244 /* NSAttributedString+CZAdditon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CZAdditon.m"; sourceTree = "<group>"; };
+		D96DC1E9212EAA4E00211244 /* NSObject+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1EA212EAA4E00211244 /* NSObject+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1EB212EAA4E00211244 /* NSString+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1EC212EAA4E00211244 /* NSString+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1ED212EAA4E00211244 /* UIButton+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1EE212EAA4E00211244 /* UIButton+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1EF212EAA4E00211244 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1F0212EAA4E00211244 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1F1212EAA4E00211244 /* UIImage+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1F2212EAA4E00211244 /* UIImage+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1F3212EAA4E00211244 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1F4212EAA4E00211244 /* UILabel+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1F5212EAA4E00211244 /* UIScreen+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1F6212EAA4E00211244 /* UIScreen+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1F9212EAA4E00211244 /* UIView+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1FA212EAA4E00211244 /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC1FB212EAA4E00211244 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC1FC212EAA4E00211244 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
+		D96DC231212EB15F00211244 /* BAITabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITabBarController.h; sourceTree = "<group>"; };
+		D96DC232212EB15F00211244 /* BAITabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITabBarController.m; sourceTree = "<group>"; };
+		D96DC234212EB17300211244 /* BAINavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAINavigationController.h; sourceTree = "<group>"; };
+		D96DC235212EB17300211244 /* BAINavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAINavigationController.m; sourceTree = "<group>"; };
+		D96DC237212EB17F00211244 /* BAITabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITabBar.h; sourceTree = "<group>"; };
+		D96DC238212EB17F00211244 /* BAITabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITabBar.m; sourceTree = "<group>"; };
+		D96DC23A212EB19300211244 /* BAIEssenseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIEssenseController.h; sourceTree = "<group>"; };
+		D96DC23B212EB19300211244 /* BAIEssenseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIEssenseController.m; sourceTree = "<group>"; };
+		D96DC23F212EB1D300211244 /* BaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		D96DC240212EB1D300211244 /* BaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
+		D96DC242212EB20F00211244 /* BAIFocusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIFocusController.h; sourceTree = "<group>"; };
+		D96DC243212EB20F00211244 /* BAIFocusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIFocusController.m; sourceTree = "<group>"; };
+		D96DC245212EB21900211244 /* BAIMeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIMeController.h; sourceTree = "<group>"; };
+		D96DC246212EB21900211244 /* BAIMeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIMeController.m; sourceTree = "<group>"; };
+		D96DC248212EB22400211244 /* BAINewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAINewController.h; sourceTree = "<group>"; };
+		D96DC249212EB22400211244 /* BAINewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAINewController.m; sourceTree = "<group>"; };
+		D96DC24B212EB56800211244 /* BAIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAIMacro.h; sourceTree = "<group>"; };
+		D96DC24C212EBBD700211244 /* UIBarButtonItem+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CZAddition.h"; sourceTree = "<group>"; };
+		D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CZAddition.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D96DC1B8212EA75300211244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D96DC1B2212EA75300211244 = {
+			isa = PBXGroup;
+			children = (
+				D96DC1BD212EA75300211244 /* Baisi */,
+				D96DC1BC212EA75300211244 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D96DC1BC212EA75300211244 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC1BB212EA75300211244 /* Baisi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D96DC1BD212EA75300211244 /* Baisi */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC1D8212EA92D00211244 /* Main */,
+				D96DC1D4212EA92D00211244 /* Essense */,
+				D96DC1D7212EA92D00211244 /* Focus */,
+				D96DC1D5212EA92D00211244 /* Me */,
+				D96DC1D6212EA92D00211244 /* New */,
+				D96DC1E0212EAA1A00211244 /* Tools */,
+				D96DC1C7212EA75900211244 /* Assets.xcassets */,
+				D96DC1DF212EA9B500211244 /* PrefixHeader.pch */,
+				D96DC1CC212EA75900211244 /* Info.plist */,
+				D96DC1CD212EA75900211244 /* main.m */,
+			);
+			path = Baisi;
+			sourceTree = "<group>";
+		};
+		D96DC1D4212EA92D00211244 /* Essense */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC23A212EB19300211244 /* BAIEssenseController.h */,
+				D96DC23B212EB19300211244 /* BAIEssenseController.m */,
+			);
+			path = Essense;
+			sourceTree = "<group>";
+		};
+		D96DC1D5212EA92D00211244 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC245212EB21900211244 /* BAIMeController.h */,
+				D96DC246212EB21900211244 /* BAIMeController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		D96DC1D6212EA92D00211244 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC248212EB22400211244 /* BAINewController.h */,
+				D96DC249212EB22400211244 /* BAINewController.m */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		D96DC1D7212EA92D00211244 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC242212EB20F00211244 /* BAIFocusController.h */,
+				D96DC243212EB20F00211244 /* BAIFocusController.m */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
+		D96DC1D8212EA92D00211244 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC1D9212EA95000211244 /* Other */,
+				D96DC1DA212EA95000211244 /* Vcs */,
+				D96DC1DB212EA95000211244 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D96DC1D9212EA95000211244 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC1DC212EA96700211244 /* AppDelegate.h */,
+				D96DC1DD212EA96700211244 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D96DC1DA212EA95000211244 /* Vcs */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC231212EB15F00211244 /* BAITabBarController.h */,
+				D96DC232212EB15F00211244 /* BAITabBarController.m */,
+				D96DC234212EB17300211244 /* BAINavigationController.h */,
+				D96DC235212EB17300211244 /* BAINavigationController.m */,
+			);
+			path = Vcs;
+			sourceTree = "<group>";
+		};
+		D96DC1DB212EA95000211244 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC237212EB17F00211244 /* BAITabBar.h */,
+				D96DC238212EB17F00211244 /* BAITabBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D96DC1E0212EAA1A00211244 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC23D212EB1AD00211244 /* Base */,
+				D96DC1E1212EAA4E00211244 /* Additions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D96DC1E1212EAA4E00211244 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC1E2212EAA4E00211244 /* CZAdditions.h */,
+				D96DC1E3212EAA4E00211244 /* NSArray+CZAddition.h */,
+				D96DC1E4212EAA4E00211244 /* NSArray+CZAddition.m */,
+				D96DC1E5212EAA4E00211244 /* NSArray+Log.h */,
+				D96DC1E6212EAA4E00211244 /* NSArray+Log.m */,
+				D96DC1E7212EAA4E00211244 /* NSAttributedString+CZAdditon.h */,
+				D96DC1E8212EAA4E00211244 /* NSAttributedString+CZAdditon.m */,
+				D96DC1E9212EAA4E00211244 /* NSObject+CZAddition.h */,
+				D96DC1EA212EAA4E00211244 /* NSObject+CZAddition.m */,
+				D96DC1EB212EAA4E00211244 /* NSString+CZAddition.h */,
+				D96DC1EC212EAA4E00211244 /* NSString+CZAddition.m */,
+				D96DC1ED212EAA4E00211244 /* UIButton+CZAddition.h */,
+				D96DC1EE212EAA4E00211244 /* UIButton+CZAddition.m */,
+				D96DC1EF212EAA4E00211244 /* UIColor+CZAddition.h */,
+				D96DC1F0212EAA4E00211244 /* UIColor+CZAddition.m */,
+				D96DC1F1212EAA4E00211244 /* UIImage+CZAddition.h */,
+				D96DC1F2212EAA4E00211244 /* UIImage+CZAddition.m */,
+				D96DC1F3212EAA4E00211244 /* UILabel+CZAddition.h */,
+				D96DC1F4212EAA4E00211244 /* UILabel+CZAddition.m */,
+				D96DC1F5212EAA4E00211244 /* UIScreen+CZAddition.h */,
+				D96DC1F6212EAA4E00211244 /* UIScreen+CZAddition.m */,
+				D96DC1F9212EAA4E00211244 /* UIView+CZAddition.h */,
+				D96DC1FA212EAA4E00211244 /* UIView+CZAddition.m */,
+				D96DC1FB212EAA4E00211244 /* UIViewController+CZAddition.h */,
+				D96DC1FC212EAA4E00211244 /* UIViewController+CZAddition.m */,
+				D96DC24C212EBBD700211244 /* UIBarButtonItem+CZAddition.h */,
+				D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		D96DC23D212EB1AD00211244 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D96DC24B212EB56800211244 /* BAIMacro.h */,
+				D96DC23E212EB1C600211244 /* Views */,
+				D96DC23F212EB1D300211244 /* BaseController.h */,
+				D96DC240212EB1D300211244 /* BaseController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D96DC23E212EB1C600211244 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D96DC1BA212EA75300211244 /* Baisi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D96DC1D1212EA75900211244 /* Build configuration list for PBXNativeTarget "Baisi" */;
+			buildPhases = (
+				D96DC1B7212EA75300211244 /* Sources */,
+				D96DC1B8212EA75300211244 /* Frameworks */,
+				D96DC1B9212EA75300211244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Baisi;
+			productName = Baisi;
+			productReference = D96DC1BB212EA75300211244 /* Baisi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D96DC1B3212EA75300211244 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BAI;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = liuchunlao;
+				TargetAttributes = {
+					D96DC1BA212EA75300211244 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = D96DC1B6212EA75300211244 /* Build configuration list for PBXProject "Baisi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D96DC1B2212EA75300211244;
+			productRefGroup = D96DC1BC212EA75300211244 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D96DC1BA212EA75300211244 /* Baisi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D96DC1B9212EA75300211244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D96DC1B7212EA75300211244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96DC209212EAA4F00211244 /* UIViewController+CZAddition.m in Sources */,
+				D96DC200212EAA4F00211244 /* NSObject+CZAddition.m in Sources */,
+				D96DC1FD212EAA4F00211244 /* NSArray+CZAddition.m in Sources */,
+				D96DC201212EAA4F00211244 /* NSString+CZAddition.m in Sources */,
+				D96DC247212EB21900211244 /* BAIMeController.m in Sources */,
+				D96DC236212EB17300211244 /* BAINavigationController.m in Sources */,
+				D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */,
+				D96DC1FE212EAA4F00211244 /* NSArray+Log.m in Sources */,
+				D96DC204212EAA4F00211244 /* UIImage+CZAddition.m in Sources */,
+				D96DC1FF212EAA4F00211244 /* NSAttributedString+CZAdditon.m in Sources */,
+				D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */,
+				D96DC205212EAA4F00211244 /* UILabel+CZAddition.m in Sources */,
+				D96DC24A212EB22400211244 /* BAINewController.m in Sources */,
+				D96DC241212EB1D300211244 /* BaseController.m in Sources */,
+				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,
+				D96DC202212EAA4F00211244 /* UIButton+CZAddition.m in Sources */,
+				D96DC233212EB15F00211244 /* BAITabBarController.m in Sources */,
+				D96DC1CE212EA75900211244 /* main.m in Sources */,
+				D96DC206212EAA4F00211244 /* UIScreen+CZAddition.m in Sources */,
+				D96DC203212EAA4F00211244 /* UIColor+CZAddition.m in Sources */,
+				D96DC239212EB17F00211244 /* BAITabBar.m in Sources */,
+				D96DC208212EAA4F00211244 /* UIView+CZAddition.m in Sources */,
+				D96DC23C212EB19300211244 /* BAIEssenseController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D96DC1CF212EA75900211244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = ./Baisi/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D96DC1D0212EA75900211244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = ./Baisi/PrefixHeader.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D96DC1D2212EA75900211244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4955MN9M7C;
+				INFOPLIST_FILE = Baisi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutuoxinda.Baisi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D96DC1D3212EA75900211244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4955MN9M7C;
+				INFOPLIST_FILE = Baisi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutuoxinda.Baisi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D96DC1B6212EA75300211244 /* Build configuration list for PBXProject "Baisi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96DC1CF212EA75900211244 /* Debug */,
+				D96DC1D0212EA75900211244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D96DC1D1212EA75900211244 /* Build configuration list for PBXNativeTarget "Baisi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96DC1D2212EA75900211244 /* Debug */,
+				D96DC1D3212EA75900211244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D96DC1B3212EA75300211244 /* Project object */;
+}

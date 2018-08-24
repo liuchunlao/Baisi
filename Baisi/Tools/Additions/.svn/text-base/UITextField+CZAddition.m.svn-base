@@ -1,0 +1,66 @@
+//
+//  UITextField+CZAddition.m
+//  ZhangXin
+//
+//  Created by liuchunlao on 2017/3/21.
+//  Copyright © 2017年 BeiJingYinChuang. All rights reserved.
+//
+
+#import "UITextField+CZAddition.h"
+
+@implementation UITextField (CZAddition)
+
++ (void)cz_setRightViewWithTextField:(UITextField *)textField imageName:(NSString *)imageName {
+    
+    UIImageView *rightView = [[UIImageView alloc]init];
+    rightView.image = [UIImage imageNamed:imageName];
+    rightView.cz_width = 40;
+    rightView.cz_height = 40;
+    rightView.contentMode = UIViewContentModeCenter;
+    textField.rightView = rightView;
+    textField.rightViewMode = UITextFieldViewModeAlways;
+    
+}
+
++ (instancetype)cz_textFieldWithPlaceHolder:(NSString *)placeHolder fontSize:(CGFloat)fontSize color:(UIColor *)color imageName:(NSString *)imageName {
+
+    return [self cz_textFieldWithPlaceHolder:placeHolder holderColor:[UIColor cz_colorWithHex:0xdddddd] fontSize:fontSize color:color imageName:imageName];
+}
+
++ (instancetype)cz_textFieldWithPlaceHolder:(NSString *)placeHolder holderColor:(UIColor *)holdC fontSize:(CGFloat)fontSize color:(UIColor *)color imageName:(NSString *)imageName {
+    
+    UITextField *txtFld = [[self alloc] init];
+    
+    if (placeHolder != nil) {
+        
+        NSAttributedString *attStr = [[NSAttributedString alloc] initWithString:placeHolder attributes:@{
+                                                                                                         NSForegroundColorAttributeName : holdC,
+                                                                                                         NSFontAttributeName : QMXFont(fontSize)
+                                                                                                         }];
+        txtFld.attributedPlaceholder = attStr;
+    }
+    txtFld.textAlignment = NSTextAlignmentLeft;
+    txtFld.textColor = color;
+    
+    txtFld.font = [UIFont systemFontOfSize:fontSize];
+    
+    if (imageName.length > 0) {
+        
+        txtFld.leftViewMode = UITextFieldViewModeAlways;
+        UIImage *img = [UIImage imageNamed:imageName];
+        //        img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        
+        UIImageView *imgV = [[UIImageView alloc] init];
+        //        imgV.tintColor = [UIColor cz_colorWithHex:0xffffff];
+        imgV.image = img;
+        
+        txtFld.leftView = imgV;
+    }
+    
+    txtFld.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    return txtFld;
+    
+}
+
+@end
