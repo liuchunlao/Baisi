@@ -27,4 +27,9 @@
     
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    [super pushViewController:viewController animated:animated];
+}
+
 @end
