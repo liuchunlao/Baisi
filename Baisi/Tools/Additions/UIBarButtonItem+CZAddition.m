@@ -10,8 +10,14 @@
 
 @implementation UIBarButtonItem (CZAddition)
 
-+ (instancetype)itemWithImage:(NSString *)imgName target:(id)target selector:(SEL)selector {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:imgName] style:UIBarButtonItemStylePlain target:target action:selector];
++ (instancetype)cz_itemWithImgName:(NSString *)imgName highImgName:(NSString *)highImgName target:(id)target selector:(SEL)selector {
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:highImgName] forState:UIControlStateHighlighted];
+    [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
     return item;
 }
 

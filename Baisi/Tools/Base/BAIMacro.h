@@ -31,8 +31,7 @@
 
 // MARK: - 主颜色
 #define BAIRGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
-//#define kBg BAIRGBACOLOR(246,246,246,1)
-#define kBg UIColor.redColor
+#define kBg BAIRGBACOLOR(246,246,246,1)
 #define BAIRedColor BAIRGBACOLOR(242, 72, 72, 1)
 
 #define BAIThemeRedColor BAIRGBACOLOR(192, 0, 0, 1)

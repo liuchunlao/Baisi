@@ -7,6 +7,7 @@
 //
 
 #import "BAIEssenseController.h"
+#import "BAISubcribeController.h"
 
 @interface BAIEssenseController ()
 
@@ -17,6 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+#pragma mark - 推荐关注
+- (void)leftItemClick {
+    
+    BAISubcribeController *vc = [[BAISubcribeController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - 搭建界面
+- (void)setupUI {
+ 
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem cz_itemWithImgName:@"MainTagSubIcon" highImgName:@"MainTagSubIconClick" target:self selector:@selector(leftItemClick)];
     
 }
 

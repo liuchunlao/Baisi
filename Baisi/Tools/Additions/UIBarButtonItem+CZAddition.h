@@ -10,6 +10,6 @@
 
 @interface UIBarButtonItem (CZAddition)
 
-+ (instancetype)itemWithImage:(NSString *)imgName target:(id)target selector:(SEL)selector;
++ (instancetype)cz_itemWithImgName:(NSString *)imgName highImgName:(NSString *)highImgName target:(id)target selector:(SEL)selector;
 
 @end
