@@ -7,6 +7,7 @@
 //
 
 #import "BAIFocusController.h"
+#import "BAIRecommentController.h"
 
 @interface BAIFocusController ()
 
@@ -20,5 +21,17 @@
     
 }
 
+
+- (void)leftItemClick {
+    BAIRecommentController *vc = [[BAIRecommentController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - 搭建界面
+- (void)setupUI {
+ 
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem cz_itemWithImgName:@"friendsRecommentIcon" highImgName:@"friendsRecommentIcon-click" target:self selector:@selector(leftItemClick)];
+    
+}
 
 @end

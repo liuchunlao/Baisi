@@ -16,7 +16,7 @@
     [btn setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:highImgName] forState:UIControlStateHighlighted];
     [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
-    
+    [btn sizeToFit];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
     return item;
 }

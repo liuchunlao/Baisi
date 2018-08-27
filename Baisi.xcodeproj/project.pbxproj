@@ -13,6 +13,13 @@
 		D9408A922133E08200AC6480 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A912133E08200AC6480 /* BaseCell.m */; };
 		D9408A942133E0C900AC6480 /* BAISubcribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408A932133E0C900AC6480 /* BAISubcribeCell.xib */; };
 		D9408A972133E0F100AC6480 /* BAISubcribeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A962133E0F100AC6480 /* BAISubcribeModel.m */; };
+		D9408A9D2133E6D200AC6480 /* BAIRecommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A9C2133E6D200AC6480 /* BAIRecommentController.m */; };
+		D9408AA32133E6F400AC6480 /* BAIRecommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408AA22133E6F400AC6480 /* BAIRecommentModel.m */; };
+		D9408AA62133E74800AC6480 /* BAIRecoCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408AA52133E74800AC6480 /* BAIRecoCategoryCell.m */; };
+		D9408AA92133E75500AC6480 /* BAIRecoUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408AA82133E75500AC6480 /* BAIRecoUserCell.m */; };
+		D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */; };
+		D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */; };
+		D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */; };
 		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
 		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
 		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
@@ -51,6 +58,17 @@
 		D9408A932133E0C900AC6480 /* BAISubcribeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAISubcribeCell.xib; sourceTree = "<group>"; };
 		D9408A952133E0F100AC6480 /* BAISubcribeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAISubcribeModel.h; sourceTree = "<group>"; };
 		D9408A962133E0F100AC6480 /* BAISubcribeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAISubcribeModel.m; sourceTree = "<group>"; };
+		D9408A9B2133E6D200AC6480 /* BAIRecommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecommentController.h; sourceTree = "<group>"; };
+		D9408A9C2133E6D200AC6480 /* BAIRecommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecommentController.m; sourceTree = "<group>"; };
+		D9408AA12133E6F400AC6480 /* BAIRecommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecommentModel.h; sourceTree = "<group>"; };
+		D9408AA22133E6F400AC6480 /* BAIRecommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecommentModel.m; sourceTree = "<group>"; };
+		D9408AA42133E74800AC6480 /* BAIRecoCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecoCategoryCell.h; sourceTree = "<group>"; };
+		D9408AA52133E74800AC6480 /* BAIRecoCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecoCategoryCell.m; sourceTree = "<group>"; };
+		D9408AA72133E75500AC6480 /* BAIRecoUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecoUserCell.h; sourceTree = "<group>"; };
+		D9408AA82133E75500AC6480 /* BAIRecoUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecoUserCell.m; sourceTree = "<group>"; };
+		D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecoCategoryCell.xib; sourceTree = "<group>"; };
+		D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecoUserCell.xib; sourceTree = "<group>"; };
+		D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecommentController.xib; sourceTree = "<group>"; };
 		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,6 +173,40 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D9408A982133E6BB00AC6480 /* Recomment */ = {
+			isa = PBXGroup;
+			children = (
+				D9408A9B2133E6D200AC6480 /* BAIRecommentController.h */,
+				D9408A9C2133E6D200AC6480 /* BAIRecommentController.m */,
+				D9408A992133E6BB00AC6480 /* Models */,
+				D9408A9A2133E6BB00AC6480 /* Views */,
+			);
+			path = Recomment;
+			sourceTree = "<group>";
+		};
+		D9408A992133E6BB00AC6480 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9408AA12133E6F400AC6480 /* BAIRecommentModel.h */,
+				D9408AA22133E6F400AC6480 /* BAIRecommentModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9408A9A2133E6BB00AC6480 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9408AA42133E74800AC6480 /* BAIRecoCategoryCell.h */,
+				D9408AA52133E74800AC6480 /* BAIRecoCategoryCell.m */,
+				D9408AA72133E75500AC6480 /* BAIRecoUserCell.h */,
+				D9408AA82133E75500AC6480 /* BAIRecoUserCell.m */,
+				D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */,
+				D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */,
+				D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D96DC1B2212EA75300211244 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +275,7 @@
 			children = (
 				D96DC242212EB20F00211244 /* BAIFocusController.h */,
 				D96DC243212EB20F00211244 /* BAIFocusController.m */,
+				D9408A982133E6BB00AC6480 /* Recomment */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -398,8 +451,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */,
 				D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */,
+				D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */,
 				D9408A942133E0C900AC6480 /* BAISubcribeCell.xib in Resources */,
+				D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,16 +522,20 @@
 				D96DC236212EB17300211244 /* BAINavigationController.m in Sources */,
 				D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */,
 				D96DC1FE212EAA4F00211244 /* NSArray+Log.m in Sources */,
+				D9408AA62133E74800AC6480 /* BAIRecoCategoryCell.m in Sources */,
 				D9408A972133E0F100AC6480 /* BAISubcribeModel.m in Sources */,
 				D9408A8F2133E06A00AC6480 /* BAISubcribeCell.m in Sources */,
 				D96DC204212EAA4F00211244 /* UIImage+CZAddition.m in Sources */,
 				D96DC1FF212EAA4F00211244 /* NSAttributedString+CZAdditon.m in Sources */,
+				D9408AA92133E75500AC6480 /* BAIRecoUserCell.m in Sources */,
 				D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */,
 				D96DC205212EAA4F00211244 /* UILabel+CZAddition.m in Sources */,
 				D96DC24A212EB22400211244 /* BAINewController.m in Sources */,
 				D96DC241212EB1D300211244 /* BaseController.m in Sources */,
+				D9408A9D2133E6D200AC6480 /* BAIRecommentController.m in Sources */,
 				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,
 				D96DC202212EAA4F00211244 /* UIButton+CZAddition.m in Sources */,
+				D9408AA32133E6F400AC6480 /* BAIRecommentModel.m in Sources */,
 				D96DC233212EB15F00211244 /* BAITabBarController.m in Sources */,
 				D9408A8C2133E05500AC6480 /* BAISubcribeController.m in Sources */,
 				D96DC1CE212EA75900211244 /* main.m in Sources */,
