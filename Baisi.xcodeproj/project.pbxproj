@@ -44,6 +44,7 @@
 		D96DC247212EB21900211244 /* BAIMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC246212EB21900211244 /* BAIMeController.m */; };
 		D96DC24A212EB22400211244 /* BAINewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC249212EB22400211244 /* BAINewController.m */; };
 		D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */; };
+		D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D97276312134E9C100D0055A /* BAIRecoUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,8 @@
 		D96DC24B212EB56800211244 /* BAIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAIMacro.h; sourceTree = "<group>"; };
 		D96DC24C212EBBD700211244 /* UIBarButtonItem+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CZAddition.h"; sourceTree = "<group>"; };
 		D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CZAddition.m"; sourceTree = "<group>"; };
+		D97276302134E9C100D0055A /* BAIRecoUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecoUserModel.h; sourceTree = "<group>"; };
+		D97276312134E9C100D0055A /* BAIRecoUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecoUserModel.m; sourceTree = "<group>"; };
 		F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +192,8 @@
 			children = (
 				D9408AA12133E6F400AC6480 /* BAIRecommentModel.h */,
 				D9408AA22133E6F400AC6480 /* BAIRecommentModel.m */,
+				D97276302134E9C100D0055A /* BAIRecoUserModel.h */,
+				D97276312134E9C100D0055A /* BAIRecoUserModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 				D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */,
 				D96DC205212EAA4F00211244 /* UILabel+CZAddition.m in Sources */,
 				D96DC24A212EB22400211244 /* BAINewController.m in Sources */,
+				D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */,
 				D96DC241212EB1D300211244 /* BaseController.m in Sources */,
 				D9408A9D2133E6D200AC6480 /* BAIRecommentController.m in Sources */,
 				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,

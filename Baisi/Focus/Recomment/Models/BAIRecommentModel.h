@@ -8,12 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class BAIRecoUserModel, BAIRecoUserModel;
 @interface BAIRecommentModel : NSObject
 
 @property (nonatomic, copy) NSString *count;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *category_id;
 
+
+/**
+ 对应的列表数据
+ */
+@property (nonatomic, strong) NSMutableArray<BAIRecoUserModel *> *userList;
+@property (nonatomic, assign) NSInteger page;
 
 @end
 //count = 65;

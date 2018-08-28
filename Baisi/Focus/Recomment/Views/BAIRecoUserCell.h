@@ -8,6 +8,9 @@
 
 #import "BaseCell.h"
 
+@class BAIRecoUserModel;
 @interface BAIRecoUserCell : BaseCell
+
+@property (nonatomic, strong) BAIRecoUserModel *model;
 
 @end
