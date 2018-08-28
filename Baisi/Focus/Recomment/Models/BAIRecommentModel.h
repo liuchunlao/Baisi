@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *category_id;
 
+@property (nonatomic, copy) NSNumber *userCount;
 
 /**
  对应的列表数据

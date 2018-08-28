@@ -29,7 +29,9 @@
 
 #pragma mark - 搭建界面
 - (void)setupUI {
- 
+    
+    self.navigationItem.title = @"关注";
+    
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem cz_itemWithImgName:@"friendsRecommentIcon" highImgName:@"friendsRecommentIcon-click" target:self selector:@selector(leftItemClick)];
     
 }

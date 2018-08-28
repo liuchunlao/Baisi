@@ -19,6 +19,10 @@
 
 @property (nonatomic, weak) BAIRecoCategoryCell *selCategoryCell;
 
+@property (nonatomic, strong) NSDictionary *params;
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
+
 @end
 
 static NSString *cellID_left = @"cellID_left";
@@ -50,12 +54,17 @@ static NSString *cellID_right = @"cellID_right";
         self->_categoryList = [BAIRecommentModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self->_tvLeft reloadData];
         
+        if (self->_categoryList.count == 0) {
+            return;
+        }
+        
         // 默认选中第0个
         BAIRecoCategoryCell *cell = [self->_tvLeft cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         [cell categoryCellSetSelected:YES];
         self->_selCategoryCell = cell;
         
         // 获取用户数据
+        [self.tvRight.mj_header beginRefreshing];
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error:%@", error);
@@ -73,14 +82,23 @@ static NSString *cellID_right = @"cellID_right";
                              @"c"           : @"subscribe",
                              @"page"        : @"1"
                              };
+    self.params = params;
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.tvRight.mj_header endRefreshing];
         
+        if (self.params != params || (![params[@"category_id"] isEqualToString:self->_selCategoryCell.model.category_id])) {
+            return;
+        }
+        
         [self.selCategoryCell.model.userList removeAllObjects];
         
+        self.selCategoryCell.model.userCount = responseObject[@"total"];
         self.selCategoryCell.model.userList = [BAIRecoUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        
         [self.tvRight reloadData];
+        [self checkFooterState];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tvRight.mj_header endRefreshing];
@@ -90,6 +108,7 @@ static NSString *cellID_right = @"cellID_right";
 }
 
 - (void)loadMoreUser {
+    
     _selCategoryCell.model.page++;
     NSDictionary *params = @{
                              @"category_id" : _selCategoryCell.model.category_id,
@@ -97,19 +116,48 @@ static NSString *cellID_right = @"cellID_right";
                              @"c"           : @"subscribe",
                              @"page"        : @(_selCategoryCell.model.page)
                              };
+    self.params = params;
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.tvRight.mj_footer endRefreshing];
-        
+
+        if (self.params != params || (![params[@"category_id"] isEqualToString:self->_selCategoryCell.model.category_id])) {
+            // 将页码减回去！
+            [self->_categoryList enumerateObjectsUsingBlock:^(BAIRecommentModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([obj.category_id isEqualToString:params[@"category_id"]]) {
+                    obj.page--;
+                };
+            }];
+            return;
+        }
+
         NSArray *list = [BAIRecoUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.selCategoryCell.model.userList addObjectsFromArray:list];
+
+        if (self.params != params) {
+            return;
+        }
+
         [self.tvRight reloadData];
-        
+        [self checkFooterState];
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tvRight.mj_footer endRefreshing];
         self.selCategoryCell.model.page--;
         [SVProgressHUD showErrorWithStatus:@"获取失败"];
     }];
+}
+
+- (void)checkFooterState {
+    
+    NSInteger count1 = _selCategoryCell.model.userList.count;
+    NSInteger count2 = _selCategoryCell.model.userCount.integerValue;
+    if (count1 == count2) {
+        [_tvRight.mj_footer endRefreshingWithNoMoreData];
+    } else {
+        [_tvRight.mj_footer resetNoMoreData];
+    }
+    _tvRight.mj_footer.hidden = !_selCategoryCell.model.userList.count;
     
 }
 
@@ -123,15 +171,28 @@ static NSString *cellID_right = @"cellID_right";
         [cell categoryCellSetSelected:YES];
         _selCategoryCell = cell;
         
-        // 立即刷新右侧表格！
+        // 立即刷新右侧表格,更新footer状态
         [_tvRight reloadData];
         
         // 加载用户数据
+        if (self.tvRight.mj_header.isRefreshing) {
+            [self.tvRight.mj_header endRefreshing];
+        }
+        
+        if (self.tvRight.mj_footer.isRefreshing) {
+            [self.tvRight.mj_footer endRefreshing];
+        }
+        
+        if (_selCategoryCell.model.userList == nil) {
+            _selCategoryCell.model.userList = [NSMutableArray array];
+        }
+        
+        [self checkFooterState];
+        
         // 确定没有数据时再刷新，防止重复加载！
         if (_selCategoryCell.model.userList.count == 0) {
             [_tvRight.mj_header beginRefreshing];
         }
-        
     }
 }
 
@@ -183,5 +244,16 @@ static NSString *cellID_right = @"cellID_right";
     
 }
 
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
+- (void)dealloc {
+    
+    [self.manager invalidateSessionCancelingTasks:YES];
+}
 
 @end
