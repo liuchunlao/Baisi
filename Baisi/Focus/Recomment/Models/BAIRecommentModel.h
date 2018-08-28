@@ -6,8 +6,16 @@
 //  Copyright © 2018年 liuchunlao. All rights reserved.
 //
 
-#import "BaseCell.h"
+#import <Foundation/Foundation.h>
 
-@interface BAIRecommentModel : BaseCell
+@interface BAIRecommentModel : NSObject
+
+@property (nonatomic, copy) NSString *count;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *category_id;
+
 
 @end
+//count = 65;
+//id = 35;
+//name = "\U7f51\U7ea2";

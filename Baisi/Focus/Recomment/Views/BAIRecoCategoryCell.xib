@@ -15,10 +15,48 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BAIRecoCategoryCell">
             <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHt-Le-DNQ" userLabel="指示线">
+                    <rect key="frame" x="0.0" y="0.0" width="4" height="59"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="4" id="dMU-CR-7Ww"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bps-MV-DDy">
+                    <rect key="frame" x="10" y="0.0" width="70" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-EU-8gJ">
+                    <rect key="frame" x="0.0" y="59" width="80" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vKE-hF-pN4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="CHt-Le-DNQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="43y-lQ-aPe"/>
+                <constraint firstAttribute="bottom" secondItem="CHt-Le-DNQ" secondAttribute="bottom" constant="1" id="5OC-cU-y3r"/>
+                <constraint firstAttribute="trailing" secondItem="k2e-EU-8gJ" secondAttribute="trailing" id="DZL-rz-YTs"/>
+                <constraint firstItem="bps-MV-DDy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KNq-0f-LAf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bps-MV-DDy" secondAttribute="trailing" id="VmS-YT-5QW"/>
+                <constraint firstItem="k2e-EU-8gJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="g59-wd-TnG"/>
+                <constraint firstItem="bps-MV-DDy" firstAttribute="leading" secondItem="CHt-Le-DNQ" secondAttribute="trailing" constant="6" id="kIU-ZX-6oI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bps-MV-DDy" secondAttribute="bottom" id="pSG-TS-FT8"/>
+                <constraint firstItem="k2e-EU-8gJ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="rUe-gp-lNN"/>
+                <constraint firstItem="CHt-Le-DNQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uHX-Pc-4Qm"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="25.5" y="52"/>
+            <connections>
+                <outlet property="infoL" destination="bps-MV-DDy" id="Ou6-IV-4W8"/>
+                <outlet property="lineV" destination="CHt-Le-DNQ" id="Qks-g7-s0T"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="52"/>
         </view>
     </objects>
 </document>

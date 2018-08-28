@@ -8,6 +8,11 @@
 
 #import "BaseCell.h"
 
+@class BAIRecommentModel;
 @interface BAIRecoCategoryCell : BaseCell
+
+@property (nonatomic, strong) BAIRecommentModel *model;
+
+- (void)categoryCellSetSelected:(BOOL)select;
 
 @end

@@ -10,25 +10,69 @@
 #import "BAIRecommentModel.h"
 #import "BAIRecoCategoryCell.h"
 #import "BAIRecoUserCell.h"
+#import <SVProgressHUD.h>
 
 @interface BAIRecommentController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tvLeft;
 @property (weak, nonatomic) IBOutlet UITableView *tvRight;
+
+@property (nonatomic, weak) BAIRecoCategoryCell *selCategoryCell;
 
 @end
 
 static NSString *cellID_left = @"cellID_left";
 static NSString *cellID_right = @"cellID_right";
 
-@implementation BAIRecommentController
+@implementation BAIRecommentController {
+    NSArray<BAIRecommentModel *> *_categoryList;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self loadCategory];
+}
+
+- (void)loadCategory {
+    
+    [SVProgressHUD show];
+    
+    NSDictionary *params = @{
+                             @"a" : @"category",
+                             @"c" : @"subscribe"
+                             };
+
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
+        
+        self->_categoryList = [BAIRecommentModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self->_tvLeft reloadData];
+        
+        // 默认选中第0个
+        BAIRecoCategoryCell *cell = [self->_tvLeft cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        [cell categoryCellSetSelected:YES];
+        self->_selCategoryCell = cell;
+        
+        // 获取用户数据
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error:%@", error);
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
     
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == _tvLeft) {
+        [_selCategoryCell categoryCellSetSelected:NO];
+        
+        BAIRecoCategoryCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        [cell categoryCellSetSelected:YES];
+        
+        _selCategoryCell = cell;
+    }
+    
     
 }
 
@@ -44,7 +88,7 @@ static NSString *cellID_right = @"cellID_right";
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == _tvLeft) {
-        return 10;
+        return _categoryList.count;
     }
     return 11;
 }
@@ -53,7 +97,7 @@ static NSString *cellID_right = @"cellID_right";
 
     if (tableView == _tvLeft) {
         BAIRecoCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID_left forIndexPath:indexPath];
-        
+        cell.model = _categoryList[indexPath.row];
         
         return cell;
     } else {
