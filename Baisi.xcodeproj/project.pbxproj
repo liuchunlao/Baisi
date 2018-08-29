@@ -22,6 +22,7 @@
 		D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */; };
 		D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E021364AEF002BB69F /* BAILoginController.m */; };
 		D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D957B4E121364AEF002BB69F /* BAILoginController.xib */; };
+		D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */; };
 		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
 		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
 		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
@@ -76,6 +77,8 @@
 		D957B4DF21364AEF002BB69F /* BAILoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAILoginController.h; sourceTree = "<group>"; };
 		D957B4E021364AEF002BB69F /* BAILoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAILoginController.m; sourceTree = "<group>"; };
 		D957B4E121364AEF002BB69F /* BAILoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAILoginController.xib; sourceTree = "<group>"; };
+		D957B4E521366A55002BB69F /* BAIPlaceholderTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIPlaceholderTextField.h; sourceTree = "<group>"; };
+		D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIPlaceholderTextField.m; sourceTree = "<group>"; };
 		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,8 +228,18 @@
 				D957B4DF21364AEF002BB69F /* BAILoginController.h */,
 				D957B4E021364AEF002BB69F /* BAILoginController.m */,
 				D957B4E121364AEF002BB69F /* BAILoginController.xib */,
+				D957B4E421366A40002BB69F /* Views */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		D957B4E421366A40002BB69F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D957B4E521366A55002BB69F /* BAIPlaceholderTextField.h */,
+				D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D96DC1B2212EA75300211244 = {
@@ -565,6 +578,7 @@
 				D9408AA32133E6F400AC6480 /* BAIRecommentModel.m in Sources */,
 				D96DC233212EB15F00211244 /* BAITabBarController.m in Sources */,
 				D9408A8C2133E05500AC6480 /* BAISubcribeController.m in Sources */,
+				D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */,
 				D96DC1CE212EA75900211244 /* main.m in Sources */,
 				D96DC206212EAA4F00211244 /* UIScreen+CZAddition.m in Sources */,
 				D96DC203212EAA4F00211244 /* UIColor+CZAddition.m in Sources */,
