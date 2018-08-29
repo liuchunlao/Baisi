@@ -20,6 +20,8 @@
 		D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */; };
 		D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */; };
 		D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */; };
+		D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E021364AEF002BB69F /* BAILoginController.m */; };
+		D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D957B4E121364AEF002BB69F /* BAILoginController.xib */; };
 		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
 		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
 		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
@@ -71,6 +73,9 @@
 		D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecoCategoryCell.xib; sourceTree = "<group>"; };
 		D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecoUserCell.xib; sourceTree = "<group>"; };
 		D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecommentController.xib; sourceTree = "<group>"; };
+		D957B4DF21364AEF002BB69F /* BAILoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAILoginController.h; sourceTree = "<group>"; };
+		D957B4E021364AEF002BB69F /* BAILoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAILoginController.m; sourceTree = "<group>"; };
+		D957B4E121364AEF002BB69F /* BAILoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAILoginController.xib; sourceTree = "<group>"; };
 		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -214,6 +219,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D957B4DE21364AD6002BB69F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D957B4DF21364AEF002BB69F /* BAILoginController.h */,
+				D957B4E021364AEF002BB69F /* BAILoginController.m */,
+				D957B4E121364AEF002BB69F /* BAILoginController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D96DC1B2212EA75300211244 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +250,7 @@
 		D96DC1BD212EA75300211244 /* Baisi */ = {
 			isa = PBXGroup;
 			children = (
+				D957B4DE21364AD6002BB69F /* Login */,
 				D96DC1D8212EA92D00211244 /* Main */,
 				D96DC1D4212EA92D00211244 /* Essense */,
 				D96DC1D7212EA92D00211244 /* Focus */,
@@ -459,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */,
 				D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */,
 				D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */,
 				D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */,
@@ -551,6 +568,7 @@
 				D96DC1CE212EA75900211244 /* main.m in Sources */,
 				D96DC206212EAA4F00211244 /* UIScreen+CZAddition.m in Sources */,
 				D96DC203212EAA4F00211244 /* UIColor+CZAddition.m in Sources */,
+				D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */,
 				D96DC239212EB17F00211244 /* BAITabBar.m in Sources */,
 				D96DC208212EAA4F00211244 /* UIView+CZAddition.m in Sources */,
 				D96DC23C212EB19300211244 /* BAIEssenseController.m in Sources */,

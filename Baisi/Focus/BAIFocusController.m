@@ -8,6 +8,7 @@
 
 #import "BAIFocusController.h"
 #import "BAIRecommentController.h"
+#import "BAILoginController.h"
 
 @interface BAIFocusController ()
 
@@ -21,6 +22,11 @@
     
 }
 
+- (IBAction)loginAndregisterBtnClick {
+    
+    BAILoginController *vc = [[BAILoginController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (void)leftItemClick {
     BAIRecommentController *vc = [[BAIRecommentController alloc] init];
