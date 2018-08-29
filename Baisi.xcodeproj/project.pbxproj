@@ -45,6 +45,7 @@
 		D96DC24A212EB22400211244 /* BAINewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC249212EB22400211244 /* BAINewController.m */; };
 		D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */; };
 		D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D97276312134E9C100D0055A /* BAIRecoUserModel.m */; };
+		D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B76DCD21363C0E00907028 /* BAIFocusController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CZAddition.m"; sourceTree = "<group>"; };
 		D97276302134E9C100D0055A /* BAIRecoUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecoUserModel.h; sourceTree = "<group>"; };
 		D97276312134E9C100D0055A /* BAIRecoUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecoUserModel.m; sourceTree = "<group>"; };
+		D9B76DCD21363C0E00907028 /* BAIFocusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIFocusController.xib; sourceTree = "<group>"; };
 		F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,6 +283,7 @@
 				D96DC242212EB20F00211244 /* BAIFocusController.h */,
 				D96DC243212EB20F00211244 /* BAIFocusController.m */,
 				D9408A982133E6BB00AC6480 /* Recomment */,
+				D9B76DCD21363C0E00907028 /* BAIFocusController.xib */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */,
 				D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */,
 				D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */,
+				D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */,
 				D9408A942133E0C900AC6480 /* BAISubcribeCell.xib in Resources */,
 				D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */,
 			);
