@@ -31,6 +31,10 @@
 #pragma mark - 搭建界面
 - (void)setupUI {
  
+    UIImageView *titleV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    titleV.bounds = CGRectMake(0, 0, 107, 19);
+    self.navigationItem.titleView = titleV;
+    
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem cz_itemWithImgName:@"MainTagSubIcon" highImgName:@"MainTagSubIconClick" target:self selector:@selector(leftItemClick)];
     
 }
