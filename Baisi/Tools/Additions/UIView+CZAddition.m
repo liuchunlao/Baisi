@@ -73,6 +73,25 @@
     return self.frame.size.height;
 }
 
+- (void)setCz_centerX:(CGFloat)cz_centerX {
+    CGPoint center = self.center;
+    center.x = cz_centerX;
+    self.center = center;
+}
+
+- (CGFloat)cz_centerX {
+    return self.center.x;
+}
+
+- (void)setCz_centerY:(CGFloat)cz_centerY {
+    CGPoint center = self.center;
+    center.y = cz_centerY;
+    self.center = center;
+}
+
+- (CGFloat)cz_centerY {
+    return self.center.y;
+}
 
 - (UIImage *)cz_snapshotImage {
 

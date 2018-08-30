@@ -49,6 +49,7 @@
 		D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */; };
 		D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D97276312134E9C100D0055A /* BAIRecoUserModel.m */; };
 		D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B76DCD21363C0E00907028 /* BAIFocusController.xib */; };
+		D9FBA5CD213796E2006F99FC /* BAITopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,8 @@
 		D97276302134E9C100D0055A /* BAIRecoUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecoUserModel.h; sourceTree = "<group>"; };
 		D97276312134E9C100D0055A /* BAIRecoUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecoUserModel.m; sourceTree = "<group>"; };
 		D9B76DCD21363C0E00907028 /* BAIFocusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIFocusController.xib; sourceTree = "<group>"; };
+		D9FBA5CB213796E2006F99FC /* BAITopSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopSelectView.h; sourceTree = "<group>"; };
+		D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopSelectView.m; sourceTree = "<group>"; };
 		F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +286,7 @@
 			children = (
 				D96DC23A212EB19300211244 /* BAIEssenseController.h */,
 				D96DC23B212EB19300211244 /* BAIEssenseController.m */,
+				D9FBA5CA213796BA006F99FC /* Views */,
 				D9408A872133E04700AC6480 /* Subcribe */,
 			);
 			path = Essense;
@@ -415,6 +419,15 @@
 			children = (
 				D9408A902133E08200AC6480 /* BaseCell.h */,
 				D9408A912133E08200AC6480 /* BaseCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9FBA5CA213796BA006F99FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9FBA5CB213796E2006F99FC /* BAITopSelectView.h */,
+				D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -559,6 +572,7 @@
 				D9408A922133E08200AC6480 /* BaseCell.m in Sources */,
 				D96DC247212EB21900211244 /* BAIMeController.m in Sources */,
 				D96DC236212EB17300211244 /* BAINavigationController.m in Sources */,
+				D9FBA5CD213796E2006F99FC /* BAITopSelectView.m in Sources */,
 				D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */,
 				D96DC1FE212EAA4F00211244 /* NSArray+Log.m in Sources */,
 				D9408AA62133E74800AC6480 /* BAIRecoCategoryCell.m in Sources */,

@@ -14,6 +14,8 @@
 @property (nonatomic, assign) CGFloat cz_y;
 @property (nonatomic, assign) CGFloat cz_width;
 @property (nonatomic, assign) CGFloat cz_height;
+@property (nonatomic, assign) CGFloat cz_centerX;
+@property (nonatomic, assign) CGFloat cz_centerY;
 
 /// 返回屏幕截图
 - (UIImage *)cz_snapshotImage;

@@ -8,6 +8,7 @@
 
 #import "BAIEssenseController.h"
 #import "BAISubcribeController.h"
+#import "BAITopSelectView.h"
 
 @interface BAIEssenseController ()
 
@@ -31,6 +32,29 @@
 #pragma mark - 搭建界面
 - (void)setupUI {
  
+    [self setupNav];
+    [self setupTags];
+}
+
+- (void)setupTags {
+    BAITopSelectView *topV = [BAITopSelectView selectViewWithArr:@[@"全部", @"图片", @"视频", @"文字"]];
+    topV.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    [self.view addSubview:topV];
+    
+    [topV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        if (@available(iOS 11.0, *)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        } else {
+            make.top.equalTo(self.mas_topLayoutGuideBottom);
+        }
+        make.height.mas_equalTo(35);
+    }];
+    
+}
+
+- (void)setupNav {
+    
     UIImageView *titleV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     titleV.bounds = CGRectMake(0, 0, 107, 19);
     self.navigationItem.titleView = titleV;
