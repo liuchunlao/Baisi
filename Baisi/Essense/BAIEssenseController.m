@@ -9,8 +9,15 @@
 #import "BAIEssenseController.h"
 #import "BAISubcribeController.h"
 #import "BAITopSelectView.h"
+#import "BAIAllController.h"
+#import "BAIVideoController.h"
+#import "BAIPictureController.h"
+#import "BAIWordController.h"
 
-@interface BAIEssenseController ()
+@interface BAIEssenseController () <BAITopSelectViewDelegate>
+
+@property (nonatomic, weak) UIScrollView *sv;
+@property (nonatomic, weak) BAITopSelectView *topV;
 
 @end
 
@@ -29,16 +36,84 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+
+    if (scrollView != _sv) {
+        return;
+    }
+    CGFloat offsetX = scrollView.contentOffset.x;
+    NSInteger idx = offsetX / scrollView.cz_width;
+    _topV.selIdx = idx;
+}
+
+#pragma mark - BAITopSelectViewDelegate
+- (void)topSelectView:(BAITopSelectView *)v didSelectIdx:(NSInteger)idx {
+    CGRect rect = CGRectMake(self.view.cz_width * idx, 0, self.view.cz_width, self.view.cz_height);
+    [_sv scrollRectToVisible:rect animated:YES];
+
+    [self showVcViewAtIndex:idx];
+}
+
+- (void)showVcViewAtIndex:(NSInteger)idx {
+    UIView *v = self.childViewControllers[idx].view;
+    [_sv addSubview:v];
+    
+    v.frame = CGRectMake(idx * _sv.cz_width, 0, _sv.cz_width, _sv.cz_height);
+}
+
 #pragma mark - 搭建界面
 - (void)setupUI {
  
     [self setupNav];
     [self setupTags];
+    [self setupChildVcs];
+    [self setupScrollView];
+}
+
+- (void)setupChildVcs {
+    BAIAllController *vc1 = [[BAIAllController alloc] init];
+    BAIVideoController *vc2 = [[BAIVideoController alloc] init];
+    BAIPictureController *vc3 = [[BAIPictureController alloc] init];
+    BAIWordController *vc4 = [[BAIWordController alloc] init];
+    [self addChildViewController:vc1];
+    [self addChildViewController:vc2];
+    [self addChildViewController:vc3];
+    [self addChildViewController:vc4];
+}
+
+- (void)setupScrollView {
+    UIScrollView *sv = [[UIScrollView alloc] init];
+    sv.backgroundColor = UIColor.redColor;
+    NSInteger count = self.childViewControllers.count;
+    sv.contentSize = CGSizeMake(count * self.view.cz_width, self.view.cz_height);
+    sv.pagingEnabled = YES;
+    sv.bounces = NO;
+    sv.delegate = self;
+    sv.showsVerticalScrollIndicator = NO;
+//    sv.showsHorizontalScrollIndicator = NO;
+    
+    [self.view insertSubview:sv atIndex:0];
+    
+    [sv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view);
+        make.bottom.equalTo(self.view);
+    }];
+    
+    if (@available(iOS 11.0, *)) {
+        _sv.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
+    _sv = sv;
 }
 
 - (void)setupTags {
-    BAITopSelectView *topV = [BAITopSelectView selectViewWithArr:@[@"全部", @"图片", @"视频", @"文字"]];
+    BAITopSelectView *topV = [BAITopSelectView selectViewWithArr:@[@"全部", @"视频", @"图片", @"文字"]];
     topV.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    topV.delegate = self;
     [self.view addSubview:topV];
     
     [topV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -50,7 +125,7 @@
         }
         make.height.mas_equalTo(35);
     }];
-    
+    _topV = topV;
 }
 
 - (void)setupNav {

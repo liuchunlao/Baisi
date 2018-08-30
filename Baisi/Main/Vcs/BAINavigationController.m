@@ -18,7 +18,7 @@
     
     // 只在此种类型下生效！
     UINavigationBar *nb = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
-    [nb setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+//    [nb setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     nb.tintColor = UIColor.darkGrayColor;
 }
 

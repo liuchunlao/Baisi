@@ -31,6 +31,11 @@
     return v;
 }
 
+- (void)setSelIdx:(NSInteger)selIdx {
+    _selIdx = selIdx;
+    [self btnClick:_btnArr[selIdx]];
+}
+
 - (void)btnClick:(UIButton *)sender {
     _selBtn.enabled = YES;
     sender.enabled = NO;
@@ -40,6 +45,11 @@
         self -> _lineV.cz_width = sender.titleLabel.cz_width;
         self -> _lineV.cz_centerX = sender.center.x;
     }];
+    
+    if ([_delegate respondsToSelector:@selector(topSelectView:didSelectIdx:)]) {
+        NSInteger idx = [_btnArr indexOfObject:sender];
+        [_delegate topSelectView:self didSelectIdx:idx];
+    }
 }
 
 #pragma mark - 搭建界面

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseController : UIViewController
+@interface BaseController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, assign) UITableViewStyle tvStyle;
+@property (nonatomic, strong) UITableView *tv;
 
 #pragma mark - 搭建界面
 - (void)setupUI;
