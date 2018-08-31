@@ -56,19 +56,31 @@
 }
 
 - (void)showVcViewAtIndex:(NSInteger)idx {
+    
     UIView *v = self.childViewControllers[idx].view;
+    
+    if ([_sv.subviews containsObject:v]) {
+        return;
+    }
+    
+    v.backgroundColor = [UIColor yellowColor];
+    v.frame = CGRectMake(kSW * idx, 0, kSW, kSH);
+    UITableView *tv = (UITableView *)v;
+    tv.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
+    tv.contentOffset = CGPointMake(0, -99);
+    
     [_sv addSubview:v];
     
-    v.frame = CGRectMake(idx * _sv.cz_width, 0, _sv.cz_width, _sv.cz_height);
+    
 }
 
 #pragma mark - 搭建界面
 - (void)setupUI {
  
     [self setupNav];
-    [self setupTags];
     [self setupChildVcs];
     [self setupScrollView];
+    [self setupTags];
 }
 
 - (void)setupChildVcs {
@@ -83,29 +95,24 @@
 }
 
 - (void)setupScrollView {
+   
+    UIView *v = [[UIView alloc] init];
+    v.frame = CGRectMake(0, 0, kSW, 0.01);
+    [self.view addSubview:v];
+    
     UIScrollView *sv = [[UIScrollView alloc] init];
     sv.backgroundColor = UIColor.redColor;
     NSInteger count = self.childViewControllers.count;
-    sv.contentSize = CGSizeMake(count * self.view.cz_width, self.view.cz_height);
+    sv.contentSize = CGSizeMake(count * self.view.cz_width, kSH);
     sv.pagingEnabled = YES;
     sv.bounces = NO;
     sv.delegate = self;
     sv.showsVerticalScrollIndicator = NO;
-//    sv.showsHorizontalScrollIndicator = NO;
+    sv.showsHorizontalScrollIndicator = NO;
     
-    [self.view insertSubview:sv atIndex:0];
+    [self.view addSubview:sv];
     
-    [sv mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view);
-        make.bottom.equalTo(self.view);
-    }];
-    
-    if (@available(iOS 11.0, *)) {
-        _sv.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+    sv.frame = self.view.bounds;
     
     _sv = sv;
 }
@@ -135,6 +142,11 @@
     self.navigationItem.titleView = titleV;
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem cz_itemWithImgName:@"MainTagSubIcon" highImgName:@"MainTagSubIconClick" target:self selector:@selector(leftItemClick)];
+
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     
 }
 
