@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C3DF448B3CAC68682887F692 /* libPods-Baisi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84C41E034515526383CF69 /* libPods-Baisi.a */; };
+		D910ACF821394F6700C80663 /* BAITopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D910ACF621394F6700C80663 /* BAITopicCell.m */; };
+		D910ACF921394F6700C80663 /* BAITopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D910ACF721394F6700C80663 /* BAITopicCell.xib */; };
 		D9408A8C2133E05500AC6480 /* BAISubcribeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A8B2133E05500AC6480 /* BAISubcribeController.m */; };
 		D9408A8F2133E06A00AC6480 /* BAISubcribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A8E2133E06A00AC6480 /* BAISubcribeCell.m */; };
 		D9408A922133E08200AC6480 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A912133E08200AC6480 /* BaseCell.m */; };
@@ -59,6 +61,9 @@
 /* Begin PBXFileReference section */
 		9B84C41E034515526383CF69 /* libPods-Baisi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Baisi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B95C6BB3D8E521C613913C2 /* Pods-Baisi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.release.xcconfig"; sourceTree = "<group>"; };
+		D910ACF521394F6700C80663 /* BAITopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopicCell.h; sourceTree = "<group>"; };
+		D910ACF621394F6700C80663 /* BAITopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopicCell.m; sourceTree = "<group>"; };
+		D910ACF721394F6700C80663 /* BAITopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAITopicCell.xib; sourceTree = "<group>"; };
 		D9408A8A2133E05500AC6480 /* BAISubcribeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAISubcribeController.h; sourceTree = "<group>"; };
 		D9408A8B2133E05500AC6480 /* BAISubcribeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAISubcribeController.m; sourceTree = "<group>"; };
 		D9408A8D2133E06A00AC6480 /* BAISubcribeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAISubcribeCell.h; sourceTree = "<group>"; };
@@ -464,6 +469,9 @@
 		D9FBA5CF2137C160006F99FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D910ACF521394F6700C80663 /* BAITopicCell.h */,
+				D910ACF621394F6700C80663 /* BAITopicCell.m */,
+				D910ACF721394F6700C80663 /* BAITopicCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -541,6 +549,7 @@
 				D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */,
 				D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */,
 				D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */,
+				D910ACF921394F6700C80663 /* BAITopicCell.xib in Resources */,
 				D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */,
 				D9408A942133E0C900AC6480 /* BAISubcribeCell.xib in Resources */,
 				D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */,
@@ -629,6 +638,7 @@
 				D9FBA5DB2137C42C006F99FC /* BAIWordController.m in Sources */,
 				D96DC233212EB15F00211244 /* BAITabBarController.m in Sources */,
 				D9FBA5D22137C40E006F99FC /* BAIAllController.m in Sources */,
+				D910ACF821394F6700C80663 /* BAITopicCell.m in Sources */,
 				D9408A8C2133E05500AC6480 /* BAISubcribeController.m in Sources */,
 				D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */,
 				D96DC1CE212EA75900211244 /* main.m in Sources */,

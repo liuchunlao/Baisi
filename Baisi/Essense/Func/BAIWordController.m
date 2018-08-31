@@ -7,30 +7,37 @@
 //
 
 #import "BAIWordController.h"
+#import "BAITopicCell.h"
 
 @interface BAIWordController ()
 
 @end
 
+static NSString *cellid = @"topic";
+
 @implementation BAIWordController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BAITopicCell" bundle:nil] forCellReuseIdentifier:cellid];
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //    return 0;
+    
     return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    return nil;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellid"];
-    }
-    cell.textLabel.text = @(indexPath.row).description;
+    
+    BAITopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid forIndexPath:indexPath];
+    
+    
     return cell;
 }
 
