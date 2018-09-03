@@ -56,4 +56,25 @@
     return c1.year == c2.year && c1.month == c2.month && c1.day == c2.day;
 }
 
+
+/**
+ 是否是昨天
+ */
+- (BOOL)cz_isYesterday {
+    
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd";
+    
+    NSString *s1 = [fmt stringFromDate:self];
+    NSString *s2 = [fmt stringFromDate:[NSDate date]];
+    
+    NSDate *d1 = [fmt dateFromString:s1];
+    NSDate *d2 = [fmt dateFromString:s2];
+    
+    NSDateComponents *c = [d1 cz_componentsFromDate:d2];
+    return c.year == 0
+        && c.month == 0
+        && c.day == 1;
+}
+
 @end

@@ -33,7 +33,10 @@
  */
 - (BOOL)cz_isToday;
 
-
+/**
+ 是否是昨天
+ */
+- (BOOL)cz_isYesterday;
 
 
 @end
