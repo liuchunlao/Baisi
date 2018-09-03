@@ -26,6 +26,7 @@
 		D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E021364AEF002BB69F /* BAILoginController.m */; };
 		D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D957B4E121364AEF002BB69F /* BAILoginController.xib */; };
 		D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */; };
+		D95E5B69213D5508008DE1A1 /* NSDate+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E5B68213D5508008DE1A1 /* NSDate+CZAddition.m */; };
 		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
 		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
 		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
@@ -92,6 +93,8 @@
 		D957B4E121364AEF002BB69F /* BAILoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAILoginController.xib; sourceTree = "<group>"; };
 		D957B4E521366A55002BB69F /* BAIPlaceholderTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIPlaceholderTextField.h; sourceTree = "<group>"; };
 		D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIPlaceholderTextField.m; sourceTree = "<group>"; };
+		D95E5B67213D5508008DE1A1 /* NSDate+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CZAddition.h"; sourceTree = "<group>"; };
+		D95E5B68213D5508008DE1A1 /* NSDate+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CZAddition.m"; sourceTree = "<group>"; };
 		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -429,6 +432,8 @@
 				D96DC1FC212EAA4E00211244 /* UIViewController+CZAddition.m */,
 				D96DC24C212EBBD700211244 /* UIBarButtonItem+CZAddition.h */,
 				D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */,
+				D95E5B67213D5508008DE1A1 /* NSDate+CZAddition.h */,
+				D95E5B68213D5508008DE1A1 /* NSDate+CZAddition.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 				D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */,
 				D96DC1FE212EAA4F00211244 /* NSArray+Log.m in Sources */,
 				D9408AA62133E74800AC6480 /* BAIRecoCategoryCell.m in Sources */,
+				D95E5B69213D5508008DE1A1 /* NSDate+CZAddition.m in Sources */,
 				D9408A972133E0F100AC6480 /* BAISubcribeModel.m in Sources */,
 				D9408A8F2133E06A00AC6480 /* BAISubcribeCell.m in Sources */,
 				D96DC204212EAA4F00211244 /* UIImage+CZAddition.m in Sources */,

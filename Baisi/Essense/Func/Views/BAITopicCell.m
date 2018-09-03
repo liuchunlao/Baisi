@@ -38,6 +38,22 @@
     [_iconV sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
     _nameL.text = topic.screen_name;
+    
+    /**
+     * 今年
+        今天
+            1分钟内   刚刚
+            1小时内   xx分钟前
+            其他      xx小时前
+     
+        非今天
+            月日  时分秒
+     
+     * 非今年
+            年月日 时分秒
+     */
+    
+    
     _timeL.text = topic.create_time;
     
     
