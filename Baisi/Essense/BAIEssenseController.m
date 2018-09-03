@@ -66,8 +66,8 @@
     v.backgroundColor = [UIColor yellowColor];
     v.frame = CGRectMake(kSW * idx, 0, kSW, kSH);
     UITableView *tv = (UITableView *)v;
-    tv.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
-    tv.contentOffset = CGPointMake(0, -99);
+    tv.contentInset = UIEdgeInsetsMake(35, 0, 49, 0);
+    tv.scrollIndicatorInsets = tv.contentInset;
     
     [_sv addSubview:v];
     
