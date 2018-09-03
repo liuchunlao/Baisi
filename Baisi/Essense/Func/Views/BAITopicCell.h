@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BAITopicModel;
 @interface BAITopicCell : UITableViewCell
+
+@property (nonatomic, strong) BAITopicModel *topic;
 
 @end

@@ -22,6 +22,7 @@
 		D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */; };
 		D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */; };
 		D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */; };
+		D95306F2213D2F08002AAE0C /* BAITopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D95306F1213D2F08002AAE0C /* BAITopicModel.m */; };
 		D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E021364AEF002BB69F /* BAILoginController.m */; };
 		D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D957B4E121364AEF002BB69F /* BAILoginController.xib */; };
 		D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */; };
@@ -84,6 +85,8 @@
 		D9408AAA2133E75E00AC6480 /* BAIRecoCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecoCategoryCell.xib; sourceTree = "<group>"; };
 		D9408AAC2133E76700AC6480 /* BAIRecoUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecoUserCell.xib; sourceTree = "<group>"; };
 		D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIRecommentController.xib; sourceTree = "<group>"; };
+		D95306F0213D2F08002AAE0C /* BAITopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopicModel.h; sourceTree = "<group>"; };
+		D95306F1213D2F08002AAE0C /* BAITopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopicModel.m; sourceTree = "<group>"; };
 		D957B4DF21364AEF002BB69F /* BAILoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAILoginController.h; sourceTree = "<group>"; };
 		D957B4E021364AEF002BB69F /* BAILoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAILoginController.m; sourceTree = "<group>"; };
 		D957B4E121364AEF002BB69F /* BAILoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAILoginController.xib; sourceTree = "<group>"; };
@@ -240,6 +243,15 @@
 				D9408AAE2133E78200AC6480 /* BAIRecommentController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D95306EF213D2EED002AAE0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D95306F0213D2F08002AAE0C /* BAITopicModel.h */,
+				D95306F1213D2F08002AAE0C /* BAITopicModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D957B4DE21364AD6002BB69F /* Login */ = {
@@ -461,6 +473,7 @@
 				D9FBA5D72137C421006F99FC /* BAIPictureController.m */,
 				D9FBA5D92137C42C006F99FC /* BAIWordController.h */,
 				D9FBA5DA2137C42C006F99FC /* BAIWordController.m */,
+				D95306EF213D2EED002AAE0C /* Models */,
 				D9FBA5CF2137C160006F99FC /* Views */,
 			);
 			path = Func;
@@ -630,6 +643,7 @@
 				D96DC205212EAA4F00211244 /* UILabel+CZAddition.m in Sources */,
 				D96DC24A212EB22400211244 /* BAINewController.m in Sources */,
 				D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */,
+				D95306F2213D2F08002AAE0C /* BAITopicModel.m in Sources */,
 				D96DC241212EB1D300211244 /* BaseController.m in Sources */,
 				D9408A9D2133E6D200AC6480 /* BAIRecommentController.m in Sources */,
 				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,

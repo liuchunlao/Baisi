@@ -8,8 +8,11 @@
 
 #import "BAIWordController.h"
 #import "BAITopicCell.h"
+#import "BAITopicModel.h"
 
 @interface BAIWordController ()
+
+@property (nonatomic, strong) NSMutableArray *topicList;
 
 @end
 
@@ -22,17 +25,36 @@ static NSString *cellid = @"topic";
     
     [self setupUI];
     [self setupRefresh];
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
 }
 
 #pragma mark - 数据加载
 - (void)loadTopics {
-    [self.tableView.mj_header endRefreshing];
+//    type    false    int    1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+    NSDictionary *params = @{
+                             @"a"       : @"list",
+                             @"c"       : @"data",
+                             @"type"    : @"29"
+                             };
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        
+        [self.topicList removeAllObjects];
+        [self processWithResponse:responseObject[@"list"]];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+        [SVProgressHUD showErrorWithStatus:@"数据获取失败"];
+    }];
+    
+}
+
+- (void)processWithResponse:(NSDictionary *)response {
+    
+    NSArray *list = [BAITopicModel mj_objectArrayWithKeyValuesArray:response];
+    [_topicList addObjectsFromArray:list];
+    
+    [self.tableView reloadData];
 }
 
 - (void)loadMoreTopics {
@@ -53,6 +75,7 @@ static NSString *cellid = @"topic";
     
     BAITopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid forIndexPath:indexPath];
     
+    cell.topic = _topicList[indexPath.row];
     
     return cell;
 }
@@ -73,6 +96,13 @@ static NSString *cellid = @"topic";
     });
     
     self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+}
+
+- (NSMutableArray *)topicList {
+    if (!_topicList) {
+        _topicList = [NSMutableArray array];
+    }
+    return _topicList;
 }
 
 
