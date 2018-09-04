@@ -8,6 +8,17 @@
 
 #import "BaseController.h"
 
-@interface BAITopicController : BaseController
+//    type    false    int    1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+typedef enum {
+    kTopicTypeAll       = 1,
+    kTopicTypeVideo     = 41,
+    kTopicTypePicture   = 10,
+    kTopicTypeWord      = 29
+    
+} kTopicType;
+
+@interface BAITopicController : UITableViewController
+
+@property (nonatomic, assign) kTopicType type;
 
 @end

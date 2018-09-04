@@ -19,14 +19,16 @@
     NSArray<UIButton *> *_btnArr;
 }
 
-+ (instancetype)selectViewWithArr:(NSArray<NSString *> *)arr {
++ (instancetype)selectViewWithArr:(NSArray<NSString *> *)arr delegate:(id<BAITopSelectViewDelegate>)delegate {
     
     BAITopSelectView *v = [[self alloc] initWithFrame:CGRectMake(0, 64, UIScreen.mainScreen.bounds.size.width, 35)];
+    v.delegate = delegate;
     [v setupUIWithArr:arr];
     [v setupBottomLine];
     
     v->_btnArr.firstObject.enabled = NO;
     v.selBtn = v->_btnArr.firstObject;
+    [v btnClick:v->_btnArr.firstObject];
     
     return v;
 }

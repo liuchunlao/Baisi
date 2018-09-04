@@ -17,6 +17,6 @@
 @interface BAITopSelectView : UIView
 @property (nonatomic, assign) NSInteger selIdx;
 @property (nonatomic, weak) id<BAITopSelectViewDelegate> delegate;
-+ (instancetype)selectViewWithArr:(NSArray<NSString *> *)arr;
++ (instancetype)selectViewWithArr:(NSArray<NSString *> *)arr delegate:(id<BAITopSelectViewDelegate>)delegate;
 
 @end

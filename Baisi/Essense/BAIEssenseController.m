@@ -9,10 +9,7 @@
 #import "BAIEssenseController.h"
 #import "BAISubcribeController.h"
 #import "BAITopSelectView.h"
-#import "BAIAllController.h"
-#import "BAIVideoController.h"
-#import "BAIPictureController.h"
-#import "BAIWordController.h"
+#import "BAITopicController.h"
 
 @interface BAIEssenseController () <BAITopSelectViewDelegate>
 
@@ -84,10 +81,16 @@
 }
 
 - (void)setupChildVcs {
-    BAIAllController *vc1 = [[BAIAllController alloc] init];
-    BAIVideoController *vc2 = [[BAIVideoController alloc] init];
-    BAIPictureController *vc3 = [[BAIPictureController alloc] init];
-    BAIWordController *vc4 = [[BAIWordController alloc] init];
+    
+    BAITopicController *vc1 = [[BAITopicController alloc] init];
+    vc1.type = kTopicTypeAll;
+    BAITopicController *vc2 = [[BAITopicController alloc] init];
+    vc2.type = kTopicTypeVideo;
+    BAITopicController *vc3 = [[BAITopicController alloc] init];
+    vc3.type = kTopicTypePicture;
+    BAITopicController *vc4 = [[BAITopicController alloc] init];
+    vc4.type = kTopicTypeWord;
+    
     [self addChildViewController:vc1];
     [self addChildViewController:vc2];
     [self addChildViewController:vc3];
@@ -118,9 +121,8 @@
 }
 
 - (void)setupTags {
-    BAITopSelectView *topV = [BAITopSelectView selectViewWithArr:@[@"全部", @"视频", @"图片", @"文字"]];
+    BAITopSelectView *topV = [BAITopSelectView selectViewWithArr:@[@"全部", @"视频", @"图片", @"文字"] delegate:self];
     topV.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-    topV.delegate = self;
     [self.view addSubview:topV];
     
     [topV mas_makeConstraints:^(MASConstraintMaker *make) {

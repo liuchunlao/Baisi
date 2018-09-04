@@ -55,10 +55,6 @@
 		D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B76DCD21363C0E00907028 /* BAIFocusController.xib */; };
 		D9D8597A213E2B260099D7BF /* BAITopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D85979213E2B250099D7BF /* BAITopicController.m */; };
 		D9FBA5CD213796E2006F99FC /* BAITopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */; };
-		D9FBA5D22137C40E006F99FC /* BAIAllController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5D12137C40E006F99FC /* BAIAllController.m */; };
-		D9FBA5D52137C418006F99FC /* BAIVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5D42137C418006F99FC /* BAIVideoController.m */; };
-		D9FBA5D82137C421006F99FC /* BAIPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5D72137C421006F99FC /* BAIPictureController.m */; };
-		D9FBA5DB2137C42C006F99FC /* BAIWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5DA2137C42C006F99FC /* BAIWordController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,14 +150,6 @@
 		D9D85979213E2B250099D7BF /* BAITopicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopicController.m; sourceTree = "<group>"; };
 		D9FBA5CB213796E2006F99FC /* BAITopSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopSelectView.h; sourceTree = "<group>"; };
 		D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopSelectView.m; sourceTree = "<group>"; };
-		D9FBA5D02137C40E006F99FC /* BAIAllController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIAllController.h; sourceTree = "<group>"; };
-		D9FBA5D12137C40E006F99FC /* BAIAllController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIAllController.m; sourceTree = "<group>"; };
-		D9FBA5D32137C418006F99FC /* BAIVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIVideoController.h; sourceTree = "<group>"; };
-		D9FBA5D42137C418006F99FC /* BAIVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIVideoController.m; sourceTree = "<group>"; };
-		D9FBA5D62137C421006F99FC /* BAIPictureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIPictureController.h; sourceTree = "<group>"; };
-		D9FBA5D72137C421006F99FC /* BAIPictureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIPictureController.m; sourceTree = "<group>"; };
-		D9FBA5D92137C42C006F99FC /* BAIWordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIWordController.h; sourceTree = "<group>"; };
-		D9FBA5DA2137C42C006F99FC /* BAIWordController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIWordController.m; sourceTree = "<group>"; };
 		F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -475,14 +463,6 @@
 			children = (
 				D9D85978213E2B250099D7BF /* BAITopicController.h */,
 				D9D85979213E2B250099D7BF /* BAITopicController.m */,
-				D9FBA5D02137C40E006F99FC /* BAIAllController.h */,
-				D9FBA5D12137C40E006F99FC /* BAIAllController.m */,
-				D9FBA5D32137C418006F99FC /* BAIVideoController.h */,
-				D9FBA5D42137C418006F99FC /* BAIVideoController.m */,
-				D9FBA5D62137C421006F99FC /* BAIPictureController.h */,
-				D9FBA5D72137C421006F99FC /* BAIPictureController.m */,
-				D9FBA5D92137C42C006F99FC /* BAIWordController.h */,
-				D9FBA5DA2137C42C006F99FC /* BAIWordController.m */,
 				D95306EF213D2EED002AAE0C /* Models */,
 				D9FBA5CF2137C160006F99FC /* Views */,
 			);
@@ -660,16 +640,12 @@
 				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,
 				D96DC202212EAA4F00211244 /* UIButton+CZAddition.m in Sources */,
 				D9408AA32133E6F400AC6480 /* BAIRecommentModel.m in Sources */,
-				D9FBA5DB2137C42C006F99FC /* BAIWordController.m in Sources */,
 				D96DC233212EB15F00211244 /* BAITabBarController.m in Sources */,
-				D9FBA5D22137C40E006F99FC /* BAIAllController.m in Sources */,
 				D910ACF821394F6700C80663 /* BAITopicCell.m in Sources */,
 				D9408A8C2133E05500AC6480 /* BAISubcribeController.m in Sources */,
 				D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */,
 				D96DC1CE212EA75900211244 /* main.m in Sources */,
 				D96DC206212EAA4F00211244 /* UIScreen+CZAddition.m in Sources */,
-				D9FBA5D82137C421006F99FC /* BAIPictureController.m in Sources */,
-				D9FBA5D52137C418006F99FC /* BAIVideoController.m in Sources */,
 				D9D8597A213E2B260099D7BF /* BAITopicController.m in Sources */,
 				D96DC203212EAA4F00211244 /* UIColor+CZAddition.m in Sources */,
 				D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */,
