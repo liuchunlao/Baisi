@@ -38,48 +38,12 @@
     [_iconV sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
     _nameL.text = topic.screen_name;
-    
-    NSString *time = topic.create_time;
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    NSDate *dt = [fmt dateFromString:time];
-    
-    if ([dt cz_isThisYear]) {
-        if ([dt cz_isToday]) {
-            NSDateComponents *cmps = [[NSDate date] cz_componentsFromDate:dt];
-            if (cmps.hour > 1) {
-                
-                if (cmps.minute < 1) {
-                    _timeL.text = @"刚刚";
-                } else {
-                    _timeL.text = [NSString stringWithFormat:@"%zd分钟前", cmps.minute];
-                }
-            } else {
-                fmt.dateFormat = @"HH:mm:ss";
-                _timeL.text = [fmt stringFromDate:dt];
-            }
-            
-        } else if ([dt cz_isYesterday]) {
-            // 昨天
-            fmt.dateFormat = @"昨天 HH:mm:ss";
-            _timeL.text = [fmt stringFromDate:dt];
-            
-        } else {
-            // 其他时间
-            fmt.dateFormat = @"MM-dd HH:mm:ss";
-            _timeL.text = [fmt stringFromDate:dt];
-        }
-        
-    } else {
-        _timeL.text = time;
-    }
-    
+    _timeL.text = topic.create_time;
     
     [_zanBtn setTitle:topic.favourite forState:UIControlStateNormal];
     [_caiBtn setTitle:topic.cai forState:UIControlStateNormal];
     [_repostBtn setTitle:topic.repost forState:UIControlStateNormal];
     [_comBtn setTitle:topic.comment forState:UIControlStateNormal];
-    
 }
 
 - (void)setFrame:(CGRect)frame {
