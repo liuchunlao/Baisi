@@ -88,6 +88,10 @@
 // 图片控件大小
 @property (nonatomic, assign, readonly) CGRect  pictureF;
 @property (nonatomic, assign, readonly) BOOL isBig;
+/**
+ 下载进度！
+ */
+@property (nonatomic, assign) CGFloat progress;
 
 @end
 

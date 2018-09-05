@@ -34,10 +34,13 @@
     
     _gifV.hidden = !topic.is_gif.integerValue;
     _bigBtn.hidden = !topic.isBig;
-    NSLog(@"%@", topic.image1);
+    
+    [self.progressView setProgress:topic.progress];
+    
     [_imgV sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         
         CGFloat progress = 1.0 * receivedSize / expectedSize;
+        topic.progress = progress;
         dispatch_async(dispatch_get_main_queue(), ^{
             self.progressView.hidden = NO;
             [self.progressView setProgress:progress];
