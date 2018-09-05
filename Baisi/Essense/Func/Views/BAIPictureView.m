@@ -9,6 +9,8 @@
 #import "BAIPictureView.h"
 #import "BAITopicModel.h"
 
+#import "BAIShowPicController.h"
+
 @interface BAIPictureView ()
 
 @property (nonatomic, weak) IBOutlet UIImageView *gifV;
@@ -77,8 +79,9 @@
 
 - (void)tapAction:(UITapGestureRecognizer *)sender {
     
-    
-    
+    BAIShowPicController *vc = [[BAIShowPicController alloc] init];
+    vc.topic = _topic;
+    [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
 }
 
 @end
