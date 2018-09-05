@@ -53,7 +53,7 @@
     _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
     
     _cellHeight += pictureH;
-    _cellHeight += BAICellMargin;
+    _cellHeight += 2 * BAICellMargin;
     _cellHeight += 40;
     
     return _cellHeight;
