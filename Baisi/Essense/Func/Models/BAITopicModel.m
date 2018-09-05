@@ -8,8 +8,57 @@
 
 #import "BAITopicModel.h"
 
-@implementation BAITopicModel
+@implementation BAITopicModel {
+    CGFloat _cellHeight;
+}
 
+
+#pragma mark - 计算cell高度！
+- (CGFloat)cellHeight {
+    if (_cellHeight > 0) {
+        return _cellHeight;
+    }
+    
+    // 计算！
+    // | - 40 - x - 40 -|
+    // 头像-昵称及时间
+    _cellHeight = 40;
+    
+    // 文字高度
+    // 间距
+    _cellHeight += BAICellMargin;
+    
+    // 文字所需高度！
+    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(kSW - 4 * BAICellMargin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{
+                                                                                                                                             NSFontAttributeName : BAIFont(14),
+                                                                                                                                             NSForegroundColorAttributeName : UIColor.grayColor
+                                                                                                                                             } context:nil].size.height;
+    _cellHeight += textH;
+    
+    // 间距
+    _cellHeight += BAICellMargin;
+    
+    // 图片位置！
+    CGFloat pictureX = BAICellMargin;
+    CGFloat pictureY = _cellHeight;
+    
+    // 高度计算
+    CGFloat pictureW = kSW - 4 * BAICellMargin;
+    CGFloat pictureH = self.height.floatValue * pictureW / self.width.floatValue * 1.0;
+    
+    _isBig = pictureH > BAICellPictureMaxH;
+    
+    // 大于1k，缩小显示，小于时正常展示！
+    pictureH = _isBig ? 350 : pictureH;
+    _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+    
+    _cellHeight += pictureH;
+    _cellHeight += BAICellMargin;
+    _cellHeight += 40;
+    NSLog(@"%f", _cellHeight);
+    
+    return _cellHeight;
+}
 
 - (NSString *)create_time {
     

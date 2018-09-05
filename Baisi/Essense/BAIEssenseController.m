@@ -83,11 +83,11 @@
 - (void)setupChildVcs {
     
     BAITopicController *vc1 = [[BAITopicController alloc] init];
-    vc1.type = kTopicTypeAll;
+    vc1.type = kTopicTypePicture;
     BAITopicController *vc2 = [[BAITopicController alloc] init];
     vc2.type = kTopicTypeVideo;
     BAITopicController *vc3 = [[BAITopicController alloc] init];
-    vc3.type = kTopicTypePicture;
+    vc3.type = kTopicTypeAll;
     BAITopicController *vc4 = [[BAITopicController alloc] init];
     vc4.type = kTopicTypeWord;
     

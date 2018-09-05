@@ -27,6 +27,9 @@
 		D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D957B4E121364AEF002BB69F /* BAILoginController.xib */; };
 		D957B4E721366A55002BB69F /* BAIPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */; };
 		D95E5B69213D5508008DE1A1 /* NSDate+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E5B68213D5508008DE1A1 /* NSDate+CZAddition.m */; };
+		D95E84FB213FC802009CDA73 /* BAIPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E84FA213FC802009CDA73 /* BAIPictureView.m */; };
+		D95E84FD213FC812009CDA73 /* BAIPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95E84FC213FC812009CDA73 /* BAIPictureView.xib */; };
+		D95E8500213FCE96009CDA73 /* BAIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E84FF213FCE96009CDA73 /* BAIConst.m */; };
 		D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96DC1C7212EA75900211244 /* Assets.xcassets */; };
 		D96DC1CE212EA75900211244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1CD212EA75900211244 /* main.m */; };
 		D96DC1DE212EA96700211244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC1DD212EA96700211244 /* AppDelegate.m */; };
@@ -92,6 +95,11 @@
 		D957B4E621366A55002BB69F /* BAIPlaceholderTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIPlaceholderTextField.m; sourceTree = "<group>"; };
 		D95E5B67213D5508008DE1A1 /* NSDate+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CZAddition.h"; sourceTree = "<group>"; };
 		D95E5B68213D5508008DE1A1 /* NSDate+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CZAddition.m"; sourceTree = "<group>"; };
+		D95E84F9213FC802009CDA73 /* BAIPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIPictureView.h; sourceTree = "<group>"; };
+		D95E84FA213FC802009CDA73 /* BAIPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIPictureView.m; sourceTree = "<group>"; };
+		D95E84FC213FC812009CDA73 /* BAIPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIPictureView.xib; sourceTree = "<group>"; };
+		D95E84FE213FCE96009CDA73 /* BAIConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIConst.h; sourceTree = "<group>"; };
+		D95E84FF213FCE96009CDA73 /* BAIConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIConst.m; sourceTree = "<group>"; };
 		D96DC1BB212EA75300211244 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96DC1C7212EA75900211244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96DC1CC212EA75900211244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -387,6 +395,8 @@
 		D96DC1E0212EAA1A00211244 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D95E84FE213FCE96009CDA73 /* BAIConst.h */,
+				D95E84FF213FCE96009CDA73 /* BAIConst.m */,
 				D96DC23D212EB1AD00211244 /* Base */,
 				D96DC1E1212EAA4E00211244 /* Additions */,
 			);
@@ -475,6 +485,9 @@
 				D910ACF521394F6700C80663 /* BAITopicCell.h */,
 				D910ACF621394F6700C80663 /* BAITopicCell.m */,
 				D910ACF721394F6700C80663 /* BAITopicCell.xib */,
+				D95E84F9213FC802009CDA73 /* BAIPictureView.h */,
+				D95E84FA213FC802009CDA73 /* BAIPictureView.m */,
+				D95E84FC213FC812009CDA73 /* BAIPictureView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -554,6 +567,7 @@
 				D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */,
 				D910ACF921394F6700C80663 /* BAITopicCell.xib in Resources */,
 				D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */,
+				D95E84FD213FC812009CDA73 /* BAIPictureView.xib in Resources */,
 				D9408A942133E0C900AC6480 /* BAISubcribeCell.xib in Resources */,
 				D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */,
 			);
@@ -635,6 +649,7 @@
 				D96DC24A212EB22400211244 /* BAINewController.m in Sources */,
 				D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */,
 				D95306F2213D2F08002AAE0C /* BAITopicModel.m in Sources */,
+				D95E84FB213FC802009CDA73 /* BAIPictureView.m in Sources */,
 				D96DC241212EB1D300211244 /* BaseController.m in Sources */,
 				D9408A9D2133E6D200AC6480 /* BAIRecommentController.m in Sources */,
 				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,
@@ -650,6 +665,7 @@
 				D96DC203212EAA4F00211244 /* UIColor+CZAddition.m in Sources */,
 				D957B4E221364AEF002BB69F /* BAILoginController.m in Sources */,
 				D96DC239212EB17F00211244 /* BAITabBar.m in Sources */,
+				D95E8500213FCE96009CDA73 /* BAIConst.m in Sources */,
 				D96DC208212EAA4F00211244 /* UIView+CZAddition.m in Sources */,
 				D96DC23C212EB19300211244 /* BAIEssenseController.m in Sources */,
 			);

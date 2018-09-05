@@ -52,6 +52,22 @@
 @property (nonatomic, copy) NSString *repost;
 
 /**
+ 帖子内容
+ */
+@property (nonatomic, copy) NSString *text;
+
+
+/**
+ 图片或视频的宽高
+ */
+@property (nonatomic, copy) NSString *width;
+@property (nonatomic, copy) NSString *height;
+
+@property (nonatomic, copy) NSString *image0;
+@property (nonatomic, copy) NSString *image1;
+@property (nonatomic, copy) NSString *image2;
+
+/**
  是否是gif
  */
 @property (nonatomic, copy) NSString *is_gif;
@@ -60,6 +76,13 @@
  第一次加载帖子时候不需要传入此关键字，当需要加载下一页时：需要传入加载上一页时返回值字段“maxtime”中的内容。
  */
 @property (nonatomic, copy) NSString *maxtime;
+
+
+//// 辅助属性
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+// 图片控件大小
+@property (nonatomic, assign, readonly) CGRect  pictureF;
+@property (nonatomic, assign, readonly) BOOL isBig;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "BAITopicCell.h"
+#import "BAIPictureView.h"
 #import "BAITopicModel.h"
 
 @interface BAITopicCell ()
@@ -14,11 +15,18 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconV;
 @property (weak, nonatomic) IBOutlet UILabel *nameL;
 @property (weak, nonatomic) IBOutlet UILabel *timeL;
+@property (weak, nonatomic) IBOutlet UILabel *infoL;
 
 @property (weak, nonatomic) IBOutlet UIButton *zanBtn;
 @property (weak, nonatomic) IBOutlet UIButton *caiBtn;
 @property (weak, nonatomic) IBOutlet UIButton *repostBtn;
 @property (weak, nonatomic) IBOutlet UIButton *comBtn;
+
+
+/**
+ 展示图片的视图！
+ */
+@property (nonatomic, strong) BAIPictureView *pictureV;
 
 @end
 
@@ -27,10 +35,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    _iconV.layer.cornerRadius = 15;
-    _iconV.layer.masksToBounds = YES;
-    
-    
+//    _iconV.layer.cornerRadius = 15;
+//    _iconV.layer.masksToBounds = YES;
 }
 
 - (void)setTopic:(BAITopicModel *)topic {
@@ -39,6 +45,10 @@
     
     _nameL.text = topic.screen_name;
     _timeL.text = topic.create_time;
+    _infoL.text = topic.text;
+    
+    self.pictureV.topic = topic;
+    self.pictureV.frame = topic.pictureF;
     
     [_zanBtn setTitle:topic.favourite forState:UIControlStateNormal];
     [_caiBtn setTitle:topic.cai forState:UIControlStateNormal];
@@ -55,6 +65,14 @@
     frame.origin.y += 10;
     
     [super setFrame:frame];
+}
+
+- (BAIPictureView *)pictureV {
+    if (!_pictureV) {
+        _pictureV = [BAIPictureView pictureView];
+        [self.contentView addSubview:_pictureV];
+    }
+    return _pictureV;
 }
 
 @end
