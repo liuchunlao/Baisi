@@ -35,8 +35,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-//    _iconV.layer.cornerRadius = 15;
-//    _iconV.layer.masksToBounds = YES;
+    _iconV.layer.cornerRadius = 15;
+    _iconV.layer.masksToBounds = YES;
 }
 
 - (void)setTopic:(BAITopicModel *)topic {

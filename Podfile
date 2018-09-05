@@ -6,7 +6,7 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'MJExtension', '~> 3.0.10'
 pod 'Masonry', '~> 1.1.0'
 pod 'FMDB'
-pod 'SDWebImage', '~> 4.0.0'
+pod 'SDWebImage'
 pod 'MJRefresh', '~> 3.1.14'
 pod 'SVProgressHUD', '~> 2.1.2'
 pod 'DZNEmptyDataSet' # 列表为空时界面提示

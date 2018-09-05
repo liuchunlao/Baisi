@@ -67,6 +67,11 @@
 @property (nonatomic, copy) NSString *image1;
 @property (nonatomic, copy) NSString *image2;
 
+
+/**
+ gif图片！
+ */
+@property (nonatomic, copy) NSString *cdn_img;
 /**
  是否是gif
  */

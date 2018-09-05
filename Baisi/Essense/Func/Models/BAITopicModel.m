@@ -49,13 +49,12 @@
     _isBig = pictureH > BAICellPictureMaxH;
     
     // 大于1k，缩小显示，小于时正常展示！
-    pictureH = _isBig ? 350 : pictureH;
+    pictureH = _isBig ? BAICellPictureModH : pictureH;
     _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
     
     _cellHeight += pictureH;
     _cellHeight += BAICellMargin;
     _cellHeight += 40;
-    NSLog(@"%f", _cellHeight);
     
     return _cellHeight;
 }
