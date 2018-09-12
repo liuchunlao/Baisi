@@ -10,6 +10,8 @@
 		C3DF448B3CAC68682887F692 /* libPods-Baisi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84C41E034515526383CF69 /* libPods-Baisi.a */; };
 		D910ACF821394F6700C80663 /* BAITopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D910ACF621394F6700C80663 /* BAITopicCell.m */; };
 		D910ACF921394F6700C80663 /* BAITopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D910ACF721394F6700C80663 /* BAITopicCell.xib */; };
+		D91A448621411BF200EBB51C /* BAIVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D91A448521411BF200EBB51C /* BAIVideoView.m */; };
+		D91A448821411BFB00EBB51C /* BAIVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91A448721411BFB00EBB51C /* BAIVideoView.xib */; };
 		D9408A8C2133E05500AC6480 /* BAISubcribeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A8B2133E05500AC6480 /* BAISubcribeController.m */; };
 		D9408A8F2133E06A00AC6480 /* BAISubcribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A8E2133E06A00AC6480 /* BAISubcribeCell.m */; };
 		D9408A922133E08200AC6480 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9408A912133E08200AC6480 /* BaseCell.m */; };
@@ -68,6 +70,9 @@
 		D910ACF521394F6700C80663 /* BAITopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopicCell.h; sourceTree = "<group>"; };
 		D910ACF621394F6700C80663 /* BAITopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopicCell.m; sourceTree = "<group>"; };
 		D910ACF721394F6700C80663 /* BAITopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAITopicCell.xib; sourceTree = "<group>"; };
+		D91A448421411BF200EBB51C /* BAIVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIVideoView.h; sourceTree = "<group>"; };
+		D91A448521411BF200EBB51C /* BAIVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIVideoView.m; sourceTree = "<group>"; };
+		D91A448721411BFB00EBB51C /* BAIVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIVideoView.xib; sourceTree = "<group>"; };
 		D9408A8A2133E05500AC6480 /* BAISubcribeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAISubcribeController.h; sourceTree = "<group>"; };
 		D9408A8B2133E05500AC6480 /* BAISubcribeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAISubcribeController.m; sourceTree = "<group>"; };
 		D9408A8D2133E06A00AC6480 /* BAISubcribeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAISubcribeCell.h; sourceTree = "<group>"; };
@@ -504,6 +509,9 @@
 				D95E84F9213FC802009CDA73 /* BAIPictureView.h */,
 				D95E84FA213FC802009CDA73 /* BAIPictureView.m */,
 				D95E84FC213FC812009CDA73 /* BAIPictureView.xib */,
+				D91A448421411BF200EBB51C /* BAIVideoView.h */,
+				D91A448521411BF200EBB51C /* BAIVideoView.m */,
+				D91A448721411BFB00EBB51C /* BAIVideoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -580,6 +588,7 @@
 				D957B4E321364AEF002BB69F /* BAILoginController.xib in Resources */,
 				D9408AAD2133E76700AC6480 /* BAIRecoUserCell.xib in Resources */,
 				D96DC1C8212EA75900211244 /* Assets.xcassets in Resources */,
+				D91A448821411BFB00EBB51C /* BAIVideoView.xib in Resources */,
 				D9408AAB2133E75E00AC6480 /* BAIRecoCategoryCell.xib in Resources */,
 				D910ACF921394F6700C80663 /* BAITopicCell.xib in Resources */,
 				D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */,
@@ -670,6 +679,7 @@
 				D95E84FB213FC802009CDA73 /* BAIPictureView.m in Sources */,
 				D96DC241212EB1D300211244 /* BaseController.m in Sources */,
 				D9408A9D2133E6D200AC6480 /* BAIRecommentController.m in Sources */,
+				D91A448621411BF200EBB51C /* BAIVideoView.m in Sources */,
 				D96DC244212EB20F00211244 /* BAIFocusController.m in Sources */,
 				D96DC202212EAA4F00211244 /* UIButton+CZAddition.m in Sources */,
 				D9408AA32133E6F400AC6480 /* BAIRecommentModel.m in Sources */,

@@ -15,7 +15,8 @@
 
 #pragma mark - 计算cell高度！
 - (CGFloat)cellHeight {
-    if (_cellHeight > 0) {
+    
+    if (_cellHeight) {
         return _cellHeight;
     }
     
@@ -30,15 +31,15 @@
     
     // 文字所需高度！
     CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(kSW - 4 * BAICellMargin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{
-                                                                                                                                             NSFontAttributeName : BAIFont(14),
-                                                                                                                                             NSForegroundColorAttributeName : UIColor.grayColor
-                                                                                                                                             } context:nil].size.height;
+                                                                                                                                                             NSFontAttributeName : BAIFont(14),
+                                                                                                                                                             NSForegroundColorAttributeName : UIColor.grayColor
+                                                                                                                                                             } context:nil].size.height;
     _cellHeight += textH;
     
     // 间距
     _cellHeight += BAICellMargin;
     
-    // 图片位置！
+    
     CGFloat pictureX = BAICellMargin;
     CGFloat pictureY = _cellHeight;
     
@@ -46,16 +47,32 @@
     CGFloat pictureW = kSW - 4 * BAICellMargin;
     CGFloat pictureH = self.height.floatValue * pictureW / self.width.floatValue * 1.0;
     
-    _isBig = pictureH > BAICellPictureMaxH;
+    /***计算中间插入内容的frame信息***/
+    if (_type == kTopicTypePicture) {
+        
+        // 图片位置！
+        _isBig = pictureH > BAICellPictureMaxH;
+        
+        // 大于1k，缩小显示，小于时正常展示！
+        pictureH = _isBig ? BAICellPictureModH : pictureH;
+        _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+        
+        _cellHeight += pictureH;
+        
+    } else if (_type == kTopicTypeVideo) {
+        // 视频frame
+        pictureH = pictureH > 450 ? 450 : pictureH;
+        _videoF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+        
+        NSLog(@"_videoF = %@", NSStringFromCGRect(_videoF));
+        _cellHeight += pictureH;
+        
+    } else {
+        _cellHeight -= BAICellMargin;
+    }
     
-    // 大于1k，缩小显示，小于时正常展示！
-    pictureH = _isBig ? BAICellPictureModH : pictureH;
-    _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-    
-    _cellHeight += pictureH;
     _cellHeight += 2 * BAICellMargin;
     _cellHeight += 40;
-    
     return _cellHeight;
 }
 

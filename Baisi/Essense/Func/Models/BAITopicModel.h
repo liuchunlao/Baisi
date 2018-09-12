@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BAITopicController.h"
+
 
 @interface BAITopicModel : NSObject
 
@@ -67,9 +69,19 @@
 @property (nonatomic, copy) NSString *image1;
 @property (nonatomic, copy) NSString *image2;
 
+/**
+ 播放次数
+ */
+@property (nonatomic, copy) NSString *playcount;
 
 /**
- gif图片！
+ 声音、视频长度！
+ */
+@property (nonatomic, copy) NSString *voicelength;
+@property (nonatomic, copy) NSString *videotime;
+
+/**
+ 视频加载时候的静态显示的图片地址
  */
 @property (nonatomic, copy) NSString *cdn_img;
 /**
@@ -87,11 +99,15 @@
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
 // 图片控件大小
 @property (nonatomic, assign, readonly) CGRect  pictureF;
+@property (nonatomic, assign, readonly) CGRect  voiceF;
+@property (nonatomic, assign, readonly) CGRect  videoF;
 @property (nonatomic, assign, readonly) BOOL isBig;
 /**
  下载进度！
  */
 @property (nonatomic, assign) CGFloat progress;
+@property (nonatomic, assign) kTopicType type;
+
 
 @end
 

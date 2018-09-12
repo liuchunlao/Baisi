@@ -8,6 +8,7 @@
 
 #import "BAITopicCell.h"
 #import "BAIPictureView.h"
+#import "BAIVideoView.h"
 #import "BAITopicModel.h"
 
 @interface BAITopicCell ()
@@ -27,6 +28,7 @@
  展示图片的视图！
  */
 @property (nonatomic, strong) BAIPictureView *pictureV;
+@property (nonatomic, strong) BAIVideoView *videoV;
 
 @end
 
@@ -47,8 +49,25 @@
     _timeL.text = topic.create_time;
     _infoL.text = topic.text;
     
-    self.pictureV.topic = topic;
-    self.pictureV.frame = topic.pictureF;
+    if (topic.type == kTopicTypePicture) {
+        // 图片
+        self.pictureV.topic = topic;
+        self.pictureV.frame = topic.pictureF;
+        self.videoV.hidden = YES;
+        self.pictureV.hidden = NO;
+        
+    } else if (topic.type == kTopicTypeVideo) {
+        // 视频
+        self.videoV.topic = topic;
+        self.videoV.frame = topic.videoF;
+        self.videoV.hidden = NO;
+        self.pictureV.hidden = YES;
+        
+    } else {
+        // 文字
+        self.videoV.hidden = YES;
+        self.pictureV.hidden = YES;
+    }
     
     [_zanBtn setTitle:topic.favourite forState:UIControlStateNormal];
     [_caiBtn setTitle:topic.cai forState:UIControlStateNormal];
@@ -65,6 +84,14 @@
     frame.origin.y += 10;
     
     [super setFrame:frame];
+}
+
+- (BAIVideoView *)videoV {
+    if (!_videoV) {
+        _videoV = [BAIVideoView videoView];
+        [self.contentView addSubview:_videoV];
+    }
+    return _videoV;
 }
 
 - (BAIPictureView *)pictureV {

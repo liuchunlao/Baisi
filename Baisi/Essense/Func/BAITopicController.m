@@ -117,7 +117,8 @@ static NSString *cellid = @"topic";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return _topicList[indexPath.row].cellHeight;
+    BAITopicModel *m = _topicList[indexPath.row];
+    return m.cellHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
