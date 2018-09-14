@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
@@ -44,6 +43,8 @@
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        
+        viewController.hidesBottomBarWhenPushed = YES;
     }
     
     [super pushViewController:viewController animated:animated];

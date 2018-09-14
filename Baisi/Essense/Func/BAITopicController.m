@@ -7,6 +7,7 @@
 //
 
 #import "BAITopicController.h"
+#import "BAICommentController.h"
 #import "BAITopicCell.h"
 #import "BAITopicModel.h"
 
@@ -77,7 +78,7 @@ static NSString *cellid = @"topic";
     NSDictionary *infoDict = response[@"info"];
     _count = [infoDict[@"count"] integerValue];
     _maxtime = infoDict[@"maxtime"];
-    
+    NSLog(@"%@", response);
     NSArray *list = [BAITopicModel mj_objectArrayWithKeyValuesArray:response[@"list"]];
     [_topicList addObjectsFromArray:list];
     
@@ -116,11 +117,19 @@ static NSString *cellid = @"topic";
     
 }
 
+#pragma mark - 代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BAICommentController *vc = [[BAICommentController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BAITopicModel *m = _topicList[indexPath.row];
     return m.cellHeight;
 }
 
+#pragma mark - 数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     self.tableView.mj_footer.hidden = !_topicList.count;
     return _topicList.count;
@@ -138,6 +147,7 @@ static NSString *cellid = @"topic";
 #pragma mark - 搭建界面
 - (void)setupUI {
     
+    self.view.backgroundColor = kBg;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"BAITopicCell" bundle:nil] forCellReuseIdentifier:cellid];
 }

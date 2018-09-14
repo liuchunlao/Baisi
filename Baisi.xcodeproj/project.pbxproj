@@ -61,6 +61,8 @@
 		D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D97276312134E9C100D0055A /* BAIRecoUserModel.m */; };
 		D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B76DCD21363C0E00907028 /* BAIFocusController.xib */; };
 		D9D8597A213E2B260099D7BF /* BAITopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D85979213E2B250099D7BF /* BAITopicController.m */; };
+		D9F6EE89214BC30900AD080D /* BAICommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6EE88214BC30900AD080D /* BAICommentController.m */; };
+		D9F6EE8B214BC32A00AD080D /* BAICommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F6EE8A214BC32A00AD080D /* BAICommentController.xib */; };
 		D9FBA5CD213796E2006F99FC /* BAITopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,9 @@
 		D9B76DCD21363C0E00907028 /* BAIFocusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIFocusController.xib; sourceTree = "<group>"; };
 		D9D85978213E2B250099D7BF /* BAITopicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopicController.h; sourceTree = "<group>"; };
 		D9D85979213E2B250099D7BF /* BAITopicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopicController.m; sourceTree = "<group>"; };
+		D9F6EE87214BC30900AD080D /* BAICommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAICommentController.h; sourceTree = "<group>"; };
+		D9F6EE88214BC30900AD080D /* BAICommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAICommentController.m; sourceTree = "<group>"; };
+		D9F6EE8A214BC32A00AD080D /* BAICommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAICommentController.xib; sourceTree = "<group>"; };
 		D9FBA5CB213796E2006F99FC /* BAITopSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopSelectView.h; sourceTree = "<group>"; };
 		D9FBA5CC213796E2006F99FC /* BAITopSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopSelectView.m; sourceTree = "<group>"; };
 		F77ACB1E20DB965F030EB1E2 /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -479,6 +484,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D9F6EE86214BC2E900AD080D /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				D9F6EE87214BC30900AD080D /* BAICommentController.h */,
+				D9F6EE88214BC30900AD080D /* BAICommentController.m */,
+				D9F6EE8A214BC32A00AD080D /* BAICommentController.xib */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		D9FBA5CA213796BA006F99FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +508,7 @@
 			children = (
 				D9D85978213E2B250099D7BF /* BAITopicController.h */,
 				D9D85979213E2B250099D7BF /* BAITopicController.m */,
+				D9F6EE86214BC2E900AD080D /* Comment */,
 				D95E8501213FF263009CDA73 /* ShowPic */,
 				D95306EF213D2EED002AAE0C /* Models */,
 				D9FBA5CF2137C160006F99FC /* Views */,
@@ -593,6 +609,7 @@
 				D910ACF921394F6700C80663 /* BAITopicCell.xib in Resources */,
 				D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */,
 				D95E84FD213FC812009CDA73 /* BAIPictureView.xib in Resources */,
+				D9F6EE8B214BC32A00AD080D /* BAICommentController.xib in Resources */,
 				D9408A942133E0C900AC6480 /* BAISubcribeCell.xib in Resources */,
 				D95E8506213FF2AC009CDA73 /* BAIShowPicController.xib in Resources */,
 				D9408AAF2133E78200AC6480 /* BAIRecommentController.xib in Resources */,
@@ -653,6 +670,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F6EE89214BC30900AD080D /* BAICommentController.m in Sources */,
 				D96DC209212EAA4F00211244 /* UIViewController+CZAddition.m in Sources */,
 				D96DC200212EAA4F00211244 /* NSObject+CZAddition.m in Sources */,
 				D96DC1FD212EAA4F00211244 /* NSArray+CZAddition.m in Sources */,
