@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="bottomBar" destination="Zol-km-5Tg" id="CP5-8R-6id"/>
                 <outlet property="bottomCons" destination="r3H-VG-7wq" id="wES-nJ-WaT"/>
+                <outlet property="tableView" destination="WjT-Ai-vuT" id="v02-ge-zha"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Y2m-jC-mWu"/>
             </connections>
         </placeholder>
@@ -63,14 +64,51 @@
                         <constraint firstAttribute="bottom" secondItem="b5E-zp-wwo" secondAttribute="bottom" id="lz3-X2-xfU"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WjT-Ai-vuT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="3ee-r0-MOG"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qur-JE-6hL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-hf-99w">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="ufs-3E-3YX"/>
+                            </constraints>
+                            <state key="normal" title="返回"/>
+                            <connections>
+                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="Fff-r5-mSF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="jfm-hf-99w" firstAttribute="top" secondItem="qur-JE-6hL" secondAttribute="top" id="1Mz-To-TkB"/>
+                        <constraint firstItem="jfm-hf-99w" firstAttribute="leading" secondItem="qur-JE-6hL" secondAttribute="leading" id="8ng-kt-Swq"/>
+                        <constraint firstAttribute="bottom" secondItem="jfm-hf-99w" secondAttribute="bottom" id="Da3-fe-baC"/>
+                        <constraint firstAttribute="height" constant="50" id="Mdp-jm-U0x"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="WjT-Ai-vuT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0rK-Nq-h2t"/>
+                <constraint firstItem="Zol-km-5Tg" firstAttribute="top" secondItem="WjT-Ai-vuT" secondAttribute="bottom" id="46b-NY-GTG"/>
+                <constraint firstItem="qur-JE-6hL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BnG-qM-k9E"/>
+                <constraint firstItem="qur-JE-6hL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WCd-OB-8TR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zol-km-5Tg" secondAttribute="trailing" id="eoc-d5-JqJ"/>
+                <constraint firstItem="WjT-Ai-vuT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jm2-Id-vPb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qur-JE-6hL" secondAttribute="trailing" id="kdX-X5-iC9"/>
                 <constraint firstItem="Zol-km-5Tg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="r3H-VG-7wq"/>
                 <constraint firstItem="Zol-km-5Tg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="seX-ye-ZQj"/>
+                <constraint firstItem="WjT-Ai-vuT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zyt-l2-wQm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
     </objects>
     <resources>

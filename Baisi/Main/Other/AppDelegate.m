@@ -29,10 +29,5 @@
 }
 
 
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    
-    NSLog(@"收到内存警告");
-}
-
 
 @end

@@ -50,6 +50,7 @@ static NSString *cellid = @"topic";
     NSDictionary *params = @{
                              @"a"       : @"list",
                              @"c"       : @"data",
+                             @"hot"     : @"1",
                              @"type"    : @(_type),
                              @"page"    : @(self.curPage)
                              };
@@ -78,7 +79,7 @@ static NSString *cellid = @"topic";
     NSDictionary *infoDict = response[@"info"];
     _count = [infoDict[@"count"] integerValue];
     _maxtime = infoDict[@"maxtime"];
-    NSLog(@"%@", response);
+    NSLog(@"%@",response);
     NSArray *list = [BAITopicModel mj_objectArrayWithKeyValuesArray:response[@"list"]];
     [_topicList addObjectsFromArray:list];
     
@@ -94,6 +95,7 @@ static NSString *cellid = @"topic";
     NSDictionary *params = @{
                              @"a"       : @"list",
                              @"c"       : @"data",
+                             @"hot"     : @"1",
                              @"type"    : @(_type),
                              @"maxtime" : _maxtime,
                              @"page"    : @(self.curPage)

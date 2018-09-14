@@ -185,7 +185,6 @@
     if (reminder < margin) {
         times--;
     }
-    NSLog(@"%zd", times);
     NSMutableArray *tempArrM = [NSMutableArray array];
     for (int i = 0; i < times; i++) {
         NSString *tempStr = [telephone substringWithRange:NSMakeRange(i * margin, margin)];
