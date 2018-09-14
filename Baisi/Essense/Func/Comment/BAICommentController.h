@@ -8,6 +8,9 @@
 
 #import "BaseController.h"
 
+@class BAITopicModel;
 @interface BAICommentController : BaseController
+
+@property (nonatomic, strong) BAITopicModel *topic;
 
 @end

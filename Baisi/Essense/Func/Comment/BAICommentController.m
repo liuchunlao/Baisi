@@ -8,6 +8,7 @@
 
 #import "BAICommentController.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
+#import "BAITopicCell.h"
 
 @interface BAICommentController () <UITableViewDelegate>
 
