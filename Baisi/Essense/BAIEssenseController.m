@@ -60,7 +60,7 @@
         return;
     }
     
-    v.backgroundColor = [UIColor yellowColor];
+    
     v.frame = CGRectMake(kSW * idx, 0, kSW, kSH);
     UITableView *tv = (UITableView *)v;
     tv.contentInset = UIEdgeInsetsMake(35, 0, 49, 0);
@@ -104,7 +104,6 @@
     [self.view addSubview:v];
     
     UIScrollView *sv = [[UIScrollView alloc] init];
-    sv.backgroundColor = UIColor.redColor;
     NSInteger count = self.childViewControllers.count;
     sv.contentSize = CGSizeMake(count * self.view.cz_width, kSH);
     sv.pagingEnabled = YES;

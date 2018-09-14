@@ -64,7 +64,6 @@
         pictureH = pictureH > 450 ? 450 : pictureH;
         _videoF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
         
-        NSLog(@"_videoF = %@", NSStringFromCGRect(_videoF));
         _cellHeight += pictureH;
         
     } else {
