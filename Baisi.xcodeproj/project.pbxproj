@@ -59,6 +59,7 @@
 		D96DC24A212EB22400211244 /* BAINewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC249212EB22400211244 /* BAINewController.m */; };
 		D96DC24E212EBBD700211244 /* UIBarButtonItem+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */; };
 		D97276322134E9C100D0055A /* BAIRecoUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D97276312134E9C100D0055A /* BAIRecoUserModel.m */; };
+		D9956E19214FDD9C00203BD2 /* BAIPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9956E18214FDD9C00203BD2 /* BAIPostController.m */; };
 		D9B76DCE21363C0E00907028 /* BAIFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B76DCD21363C0E00907028 /* BAIFocusController.xib */; };
 		D9D8597A213E2B260099D7BF /* BAITopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D85979213E2B250099D7BF /* BAITopicController.m */; };
 		D9F6EE89214BC30900AD080D /* BAICommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6EE88214BC30900AD080D /* BAICommentController.m */; };
@@ -165,6 +166,8 @@
 		D96DC24D212EBBD700211244 /* UIBarButtonItem+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CZAddition.m"; sourceTree = "<group>"; };
 		D97276302134E9C100D0055A /* BAIRecoUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIRecoUserModel.h; sourceTree = "<group>"; };
 		D97276312134E9C100D0055A /* BAIRecoUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIRecoUserModel.m; sourceTree = "<group>"; };
+		D9956E17214FDD9C00203BD2 /* BAIPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIPostController.h; sourceTree = "<group>"; };
+		D9956E18214FDD9C00203BD2 /* BAIPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIPostController.m; sourceTree = "<group>"; };
 		D9B76DCD21363C0E00907028 /* BAIFocusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAIFocusController.xib; sourceTree = "<group>"; };
 		D9D85978213E2B250099D7BF /* BAITopicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAITopicController.h; sourceTree = "<group>"; };
 		D9D85979213E2B250099D7BF /* BAITopicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAITopicController.m; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 		D96DC1BD212EA75300211244 /* Baisi */ = {
 			isa = PBXGroup;
 			children = (
+				D9956E16214FDD8000203BD2 /* Post */,
 				D957B4DE21364AD6002BB69F /* Login */,
 				D96DC1D8212EA92D00211244 /* Main */,
 				D96DC1D4212EA92D00211244 /* Essense */,
@@ -482,6 +486,15 @@
 				D9408A912133E08200AC6480 /* BaseCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D9956E16214FDD8000203BD2 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				D9956E17214FDD9C00203BD2 /* BAIPostController.h */,
+				D9956E18214FDD9C00203BD2 /* BAIPostController.m */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		D9F6EE86214BC2E900AD080D /* Comment */ = {
@@ -676,6 +689,7 @@
 				D96DC1FD212EAA4F00211244 /* NSArray+CZAddition.m in Sources */,
 				D96DC201212EAA4F00211244 /* NSString+CZAddition.m in Sources */,
 				D9408A922133E08200AC6480 /* BaseCell.m in Sources */,
+				D9956E19214FDD9C00203BD2 /* BAIPostController.m in Sources */,
 				D96DC247212EB21900211244 /* BAIMeController.m in Sources */,
 				D96DC236212EB17300211244 /* BAINavigationController.m in Sources */,
 				D9FBA5CD213796E2006F99FC /* BAITopSelectView.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "BAITabBar.h"
+#import "BAIPostController.h"
 
 @implementation BAITabBar {
     UIButton *_plusBtn;
@@ -21,6 +22,13 @@
     return self;
 }
 
+- (void)btnClick {
+    
+    BAIPostController *vc = [[BAIPostController alloc] init];
+    
+    [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
+}
+
 #pragma mark - 搭建界面
 - (void)setupUI {
     
@@ -28,6 +36,7 @@
     [btn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
     
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     _plusBtn = btn;
 }
 
