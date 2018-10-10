@@ -9,30 +9,36 @@
 #import "UIImage+CZAddition.h"
 
 @implementation UIImage (CZAddition)
-
-+ (UIImage *)cz_image:(UIImage*)image byScale:(CGFloat)scale {
+- (UIImage *)cz_roundImage {
     
-    UIImage *sourceImage = image;
-    UIImage *newImage = nil;
+    CGFloat w = self.size.width;
+    CGFloat h = self.size.height;
     
-    CGFloat width = sourceImage.size.width * scale;
-    CGFloat height = sourceImage.size.height * scale;
+    CGFloat x;
+    CGFloat y;
+    CGFloat width;
+    if (w > h) {
+        width = h;
+        x = -(w - h) * 0.5;
+        y = 0;
+    } else {
+        width = w;
+        y = -(h - w) * 0.5;
+        x = 0;
+    }
     
-    CGSize targetSize = CGSizeMake(width, height);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, width), NO, 0.0);
     
-    UIGraphicsBeginImageContext(targetSize);
+    CGContextRef cxt = UIGraphicsGetCurrentContext();
     
-    CGRect thumbnailRect = CGRectZero;
-    thumbnailRect.origin = CGPointZero;
-    thumbnailRect.size.width  = targetSize.width;
-    thumbnailRect.size.height = targetSize.height;
+    CGContextAddEllipseInRect(cxt, CGRectMake(0, 0, width, width));
+    CGContextClip(cxt);
+    [self drawInRect:CGRectMake(x, y, w, h)];
     
-    [sourceImage drawInRect:thumbnailRect];
-    
-    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *clipImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    return newImage ;
+    return clipImg;
 }
 
 + (UIImage *)cz_imageWithColor:(UIColor *)color {

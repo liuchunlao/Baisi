@@ -11,11 +11,8 @@
 @interface UIImage (CZAddition)
 
 
+- (UIImage *)cz_roundImage;
 + (UIImage *)cz_imageWithColor:(UIColor *)color size:(CGSize)size;
-/**
- 图片压缩
- */
-+ (UIImage *)cz_image:(UIImage*)image byScale:(CGFloat)scale;
 
 /**
  通过颜色生成图片
